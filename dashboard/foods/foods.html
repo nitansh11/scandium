@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./foods.css" />
+    <title>My Daily Log</title>
+  </head>
+  <body>
+    <div class="foods">
+      <div class="foods__navigation">
+        <button class="foods__navigation__my-day-btn" value="my-day">
+          <i class="material-icons">search</i>
+          <p>SEARCH</p>
+        </button>
+        <button class="foods__navigation__in-depth-btn" value="in-depth">
+          <i class="material-icons">star</i>
+          <p>QUICK FIND</p>
+        </button>
+        <button class="foods__navigation__water-btn" value="water">
+          <i class="material-icons">face</i>
+          <p>MY FOODS</p>
+        </button>
+        <button class="foods__navigation__steps-btn" value="steps">
+          <i class="material-icons">line_weight</i>
+          <p>SCAN</p>
+        </button>
+        <button class="foods__navigation__steps-btn" value="steps">
+          <i class="material-icons">camera</i>
+          <p>SNAP</p>
+        </button>
+        <button class="foods__navigation__steps-btn" value="steps">
+          <i class="material-icons">lightbulb_outline</i>
+          <p>MACROS FINDER</p>
+        </button>
+        <button class="foods__navigation__steps-btn" value="steps">
+          <i class="material-icons">receipt</i>
+          <p>RECIPES & MEAL PLANS</p>
+        </button>
+        <button class="foods__navigation__steps-btn" value="steps">
+          <i class="material-icons">chat_bubble</i>
+          <p>SAY</p>
+        </button>
+        <button class="foods__navigation__steps-btn" value="steps">
+          <i class="material-icons">whatshot</i>
+          <p>QUICK ENTRY</p>
+        </button>
+      </div>
+
+      <div id="my-day" class="foods__content foods__content--my-day">
+        <h2>My Day</h2>
+      </div>
+      <div
+        id="in-depth"
+        class="foods__content foods__content--in-depth"
+      >
+        <h2>In Depth</h2>
+      </div>
+      <div id="water" class="foods__content foods__content--water">
+        <h2>Water</h2>
+      </div>
+      <div id="steps" class="foods__content foods__content--steps">
+        <h2>Steps</h2>
+      </div>
+    </div>
+
+    <script src="./foods.js"></script>
+  </body>
+</html>
