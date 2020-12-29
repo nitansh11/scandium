@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*****************************/
+.daily-log{
+    width: 100%;
+    /* border: 1px solid gray; */
+    margin: auto;
+}
+
+/************Daily Log Navigation (Nitansh)****************/
+.daily-log__navigation{
+    height: 50px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,25%);  
+}
+.daily-log__navigation button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #F4F4F4;
+    color: rgb(159,159,159);
+    padding-bottom: 10px; 
+}
+
+.daily-log__navigation button:first-child{
+   border-bottom : 2px solid #616161;
+    color :#616161;  
+}
+.daily-log__navigation button:first-child :placeholder-shown{
+    color : #616161;
+}
+.daily-log__navigation p{
+    font-size: 20px;
+    color: rgb(159,159,159);
+}
+/************Cotnent (Nitansh)****************/
+.daily-log__content{
+    display: none;
+    width: 95%;
+    /* border: 1px solid gray; */
+    margin: 10px auto;
+    
+}
+.daily-log__content:nth-child(2){
+    display: block; 
+}
+
+
+/************************Water content (Nitansh)**********************/
+.daily-log__content--water{
+    margin:100px auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.daily-log__content--water h3{
+    padding: 20px;
+    background-color: #F4F4F4;
+   
+}
+.daily-log__content--water__glasses {
+    display: grid;
+    grid-template-columns: repeat(8,auto);
+    width: 50%;
+    justify-items: center;
+    padding: 25px;
+}
+.daily-log__content--water__glasses img{
+    height: 80px;
+}
+.daily-log__content--water p{
+    padding: 20px;
+    font-size: 12px;
+}
+/************************steps content (Nitansh)**********************/
+.daily-log__content--steps{
+   width: 80%;
+    margin:50px auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    
+}
+
+.daily-log__content--steps h3{
+    padding: 20px;
+    background-color: #F4F4F4;
+}
+.daily-log__content--steps__chart {
+   
+    display: grid;
+    grid-template-columns: 100%;
+    
+}
+
+.daily-log__content--steps p{
+    padding: 20px;
+    font-size: 12px;
+}
+
+/************************in depth content (Nitansh)**********************/
+.daily-log__content--in-depth{
+    width: 80%;
+    margin:50px auto;
+   
+}
+
+.daily-log__content--in-depth__chart-box{
+    
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.daily-log__content--in-depth h3{
+    padding: 20px;
+    background-color: #F4F4F4;
+}
+.daily-log__content--in-depth__chart {
+    display: grid;
+    grid-template-columns: 100%;    
+}
+.daily-log__content--in-depth p{
+    padding: 20px;
+    font-size: 12px;
+}
+/***My Foods CSS(Nitansh)****/
+.daily-log__content--in-depth__table{
+    display: grid;
+    grid-template-columns: 100%;   
+    justify-content: center;
+    padding: 10px 0;
+}
+.daily-log__content--in-depth__table__row{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    width: 90%;
+    margin:auto;
+    padding: 0 10px;
+   
+}
+.daily-log__content--in-depth__table__row:first-child{
+    font-weight: bold;
+}
+
+.daily-log__content--in-depth__table__row:nth-child(odd){
+    background-color: #EDEDED;
+}
+.daily-log__content--in-depth__table__row img{
+    width: 30px;
+    margin-top: 10px;
+    
+}
+/***Table 2 (Nitansh)**/
+
+.daily-log__content--in-depth__table-2{
+    display: grid;
+    grid-template-columns: 100%;   
+    padding: 10px 0;
+}
+
+.daily-log__content--in-depth__table-2__row{
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    width: 90%;
+    margin:auto;
+    padding: 0 10px;
+   
+}
+
+.daily-log__content--in-depth__table-2__row:first-child{
+    font-weight: bold;
+}
+
+.daily-log__content--in-depth__table-2__row:nth-child(odd){
+    background-color: #EDEDED;
+}
+
+
+/************************My Daycontent (Nitansh)**********************/
+.daily-log__content--my-day{
+    width: 80%;
+    margin:50px auto;
+   
+}
+.daily-log__content--my-day__chart-box{
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.daily-log__content--my-day__chart {
+    display: grid;
+    grid-template-columns: 100%;    
+}
+
+/********My Meals********/
+
+.daily-log__content--my-day__my-meals{
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.daily-log__content--my-day__my-meals__row{
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+    padding: 10px;
+    border-bottom: 1px solid rgba(197, 191, 191, 0.527);
+    background-color: #FFF8E1;
+}
+.daily-log__content--my-day__my-meals__row--white{
+    background-color: white;
+}
+
+
+.daily-log__content--my-day__my-meals__row--subtotal{
+    background-color: #FFECB3;
+}
+.daily-log__content--my-day__my-meals__row--total{
+    background-color: #FFE082;
+}
+.daily-log__content--my-day__my-meals button{
+    background-color: #1BC98E;
+    color: white;
+    margin-top: 10px;
+    border: none;
+    height: 40px;
+    font-weight: bolder;
+    cursor: pointer;
+    outline: none;
+}
