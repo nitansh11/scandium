@@ -55,7 +55,9 @@
     background-color: #F4F4F4;
     /* color: rgb(159,159,159); */
     /* padding-bottom: 10px; */
-    width: 40%;
+    width: 49.5%;
+    font-size: 15px;
+    padding: 5px;
 }
 
 .myExercises__p1,
@@ -235,7 +237,9 @@
 }
 
 /* The Close Button */
-.close {
+.close,.close1,
+.close2,
+.close3 {
   color: white;
   float: right;
   font-size: 28px;
@@ -244,8 +248,10 @@
   margin-left: 20px;
 }
 
-.close:hover,
-.close:focus {
+.close:hover,.close1:hover,.close1:focus,
+.close2:hover,
+.close:focus,
+.close3:hover {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -260,6 +266,7 @@
 }
 .nav > p{
     font-weight: 600;
+    font-size: 20px;
 }
 .imgDiv{
     display: flex;
@@ -279,3 +286,30 @@
     font-weight: 100;
 }
 
+.orderedList{
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.crunchesDiv{
+    /* border: 1px solid gray; */
+    /* height: 100px; */
+    width: 99%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.btnImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.crunchesDiv>button{
+    border: 0px;
+    cursor: pointer;
+    background-color: white;
+    font-size: 16px;
+}
+.crunchesDiv:hover{
+    background-color: rgba(233, 225, 225, 0.301);
+}
