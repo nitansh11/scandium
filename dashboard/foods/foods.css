@@ -4,7 +4,6 @@
 }
 /*****************************/
 .foods{
-    width: 80%;
     /* border: 1px solid gray; */
     margin: auto;
 }
@@ -46,4 +45,314 @@
 }
 .foods__content:nth-child(2){
     display: block; 
+}
+
+
+
+/***********************************Foods-Search Section (Nitansh)**************************/
+.foods__content--search {
+    margin-top: 10px;
+    
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 20px;
+  }
+  
+  /****/
+  .foods__content--search__input {
+    padding: 5px;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    height: 40px;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  .foods__content--search__input i {
+    color: rgba(128, 128, 128, 0.623);
+    margin-right: 5px;
+  }
+  .foods__content--search__input input {
+    width: 100%;
+    padding: 2px;
+    border: none;
+    outline: none;
+  }
+  
+  .foods__content--search__input input::placeholder {
+    font-size: 15px;
+  }
+  /**/
+  .foods__content--search__dropdown {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin-top: 10px;
+  }
+  
+  .foods__content--search__dropdown button {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    outline: none;
+    border: none;
+    font-size: 20px;
+  }
+  
+  /***list***/
+  .foods__content--search__list {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-top: 10px;
+  }
+  .foods__content--search__list-item{
+      display:flex;
+     align-items: center;
+     padding: 3px;
+     cursor: pointer;
+  }
+  .foods__content--search__list-item img{
+      margin-right: 20px;
+  }
+  .foods__content--search__list-item:hover{
+      background-color: #CCCCCC;
+  }
+  
+
+  /***********************************Quick Find Section (Nitansh)**************************/
+.foods__content--quick-find {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 100%;
+  padding: 20px;
+  display: none;
+}
+
+/****/
+.foods__content--quick-find__input {
+  padding: 5px;
+  display: flex;
+  width: 100%;
+  margin: auto;
+  height: 40px;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.foods__content--quick-find__input i {
+  color: rgba(128, 128, 128, 0.623);
+  margin-right: 5px;
+}
+.foods__content--quick-find__input input {
+  width: 100%;
+  padding: 2px;
+  border: none;
+  outline: none;
+}
+
+.foods__content--quick-find__input input::placeholder {
+  font-size: 15px;
+}
+
+
+  /***********************************My Food Section (Nitansh)**************************/
+  .foods__content--my-food {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 20px;
+    display: none;
+  }
+  
+  /****/
+  .foods__content--my-food__input {
+    padding: 5px;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    height: 40px;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  .foods__content--my-food__input i {
+    color: rgba(128, 128, 128, 0.623);
+    margin-right: 5px;
+  }
+  .foods__content--my-food__input input {
+    width: 100%;
+    padding: 2px;
+    border: none;
+    outline: none;
+  }
+  
+  .foods__content--my-food__input input::placeholder {
+    font-size: 15px;
+  }
+
+
+  /***********************************Scan Section (Nitansh)**************************/
+  .foods__content--scan {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 20px;
+    display: none;
+  }
+  
+  /***********************************Snap Section (Nitansh)**************************/
+  .foods__content--snap {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 20px;
+    display: none;
+  }
+
+  
+  /***********************************Macros Finder Section (Nitansh)**************************/
+  .foods__content--macros-finder {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 20px;
+    display: none;
+  }
+
+  /***********************************Say Section (Nitansh)**************************/
+  .foods__content--say {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+  }
+  .foods__content--say textarea{
+    width: 100%;
+    margin:auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: rgba(128, 128, 128, 0.404);
+    padding: 20px;
+  }
+  .foods__content--say button{
+    width: 100px;
+    height: 40px;
+    background-color: #027BE3;
+    border: none;
+    outline: none;
+    color: white;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+
+   
+  /***********************************Quick Entry Section With Modal (Nitansh)**************************/
+  .foods__content--quick-entry-modal{
+    margin-top: 0;
+  }
+  .foods__content--quick-entry-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+
+  /* Modal Content */
+  .foods__content--quick-entry-modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.foods__content--quick-entry-modal-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.foods__content--quick-entry-modal-close:hover,
+.foods__content--quick-entry-modal-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+ 
+}
+
+.foods__content--quick-entry-form{
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 100%;
+  overflow-y: auto;
+  height: 400px;
+ 
+}
+.foods__content--quick-entry-form > div{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-row-gap: 20px;
+}
+
+.foods__content--quick-entry-form > div label{
+color: gray;
+}
+
+.foods__content--quick-entry-form > div input{
+  height: 25px;
+  border: none;
+  outline: none;
+  border-bottom:1px solid rgba(128, 128, 128, 0.568);
+  padding:2px;
+}
+.foods__content--quick-entry-modal-content{
+  position: relative;
+  
+  padding: 0;
+}
+#form-top{
+  background-color: #1BC98E;
+  color: white;
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  margin-left: -1px;
+}
+#form-top p{
+  font-size: 25px;
+  font-weight: bolder;
+}
+#form-top button{
+  width: 150px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.foods__content--scan h1,.foods__content--snap h1,.foods__content--macros-finder h1{
+  color: rgba(128, 128, 128, 0.685);
+  width: 90%;
+  margin:auto;
+  text-align: center;
+  margin-top: 20px;
 }
