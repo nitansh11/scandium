@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*****************************/
+.nutrition{
+    width: 100%;
+    /* border: 1px solid gray; */
+    margin: auto;
+}
+
+/****************************/
+.nutrition__navigation{
+    height: 50px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6,16.66%);  
+}
+.nutrition__navigation button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #F4F4F4;
+    color: rgb(159,159,159);
+    padding-bottom: 10px; 
+}
+
+.nutrition__navigation button:first-child{
+   border-bottom : 2px solid #616161;
+    color :#616161;  
+}
+.nutrition__navigation button:first-child :placeholder-shown{
+    color : #616161;
+}
+.nutrition__navigation p{
+    font-size: 20px;
+    color: rgb(159,159,159);
+}
+/****************************/
+.nutrition__content{
+    display: none;
+    width: 95%;
+    /* border: 1px solid gray; */
+    margin: 10px auto;
+    padding: 10px;
+}
+.nutrition__content:nth-child(2){
+    display: block; 
+}
+/* NUTRITION BLOG */
+.nutrition__content--nutrition{
+    width: 80%;
+    margin:50px auto;
+}
+
+.nutrition__content--nutrition__chart-box{
+    margin-bottom: 20px;
+}
+.nutrition__content--nutrition__chart {
+    display: grid;
+    grid-template-columns: 100%;    
+}
+.nutrition__content--nutrition p{
+    padding: 20px;
+    font-size: 20px;
+}
+.nutrition__carb,.nutrition__history{
+    width: 25%;
+    height: 40px;
+    margin :20px 40px 20px 60px;
+    border:1px solid white;
+    box-shadow: 10px 10px 10px rgb(238, 227, 227);
+    cursor: pointer;
+}
+.nutrition__carb:hover,.nutrition__history:hover{
+    border-bottom:2px solid blue ;
+}
+
+
+
+/* EXERSISE__BLOG */
+.nutrition__content--exersise{
+    width: 80%;
+    margin:50px auto;
+}
+
+.exersise__content--exersise__chart-box{
+    
+    margin-bottom: 20px;
+}
+.exersise__content--exersise__chart {
+    display: grid;
+    grid-template-columns: 100%;    
+}
+.exersise__content--exersise p{
+    padding: 20px;
+    font-size: 20px;
+}
+.exersise__carb,.exersise__history{
+    width: 25%;
+    height: 40px;
+    margin :20px 40px 0px 60px;
+    border:1px solid white;
+    box-shadow: 10px 10px 10px rgb(238, 227, 227);
+    cursor: pointer;
+}
+.exersise__carb:hover,.exersise__history:hover{
+    border-bottom:2px solid blue ;
+}
+
+
+
+/* FASTING__BLOG */
+/* .nutrition__content--fasting{
+    width: 80%;
+    margin:50px auto;
+}
+
+.fasting__content--fasting__chart-box{
+    
+    margin-bottom: 20px;
+}
+.fasting__content--fasting__chart {
+    display: grid;
+    grid-template-columns: 100%;    
+}
+.fasting__content--fasting p{
+    padding: 20px;
+    font-size: 20px;
+}
+.fasting__carb,.fasting__history{
+    width: 25%;
+    height: 40px;
+    margin :20px 40px 0px 60px;
+    border:1px solid white;
+    box-shadow: 10px 10px 10px rgb(238, 227, 227);
+    cursor: pointer;
+}
+.fasting__carb:hover,.fasting__history:hover{
+    border-bottom:2px solid blue ;
+} */
+
+
+/* HYDROGEN BLOG */
+.nutrition__content--hydrogen{
+    width: 80%;
+    margin:50px auto;
+}
+
+.hydrogen__content--hydrogen__chart-box{
+    
+    margin-bottom: 20px;
+}
+.hydrogen__content--hydrogen__chart {
+    display: grid;
+    grid-template-columns: 100%;    
+}
+.hydrogen__content--hydrogen p{
+    padding: 20px;
+    font-size: 20px;
+}
+.hydrogen__carb,.hydrogen__history{
+    width: 25%;
+    height: 40px;
+    margin :20px 40px 0px 60px;
+    border:1px solid white;
+    box-shadow: 10px 10px 10px rgb(238, 227, 227);
+    cursor: pointer;
+}
+.hydrogen__carb:hover,.hydrogen__history:hover{
+    border-bottom:2px solid blue ;
+}
+
+/* sleep BLOG */
+.nutrition__content--sleep{
+    width: 80%;
+    margin:50px auto;
+}
+
+.sleep__content--sleep__chart-box{
+    
+    margin-bottom: 20px;
+}
+.sleep__content--sleep__chart {
+    display: grid;
+    grid-template-columns: 100%;    
+}
+.sleep__content--sleep p{
+    padding: 20px;
+    font-size: 20px;
+}
+.sleep__carb,.sleep__history{
+    width: 25%;
+    height: 40px;
+    margin :20px 40px 0px 60px;
+    border:1px solid white;
+    box-shadow: 10px 10px 10px rgb(238, 227, 227);
+    cursor: pointer;
+}
+.sleep__carb:hover,.sleep__history:hover{
+    border-bottom:2px solid blue ;
+}

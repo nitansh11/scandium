@@ -25,21 +25,69 @@ allButtons.forEach((button) => {
 
 
 ////measurements page body popup ///////
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("bodyBtn");
-var span = document.getElementsByClassName("close")[0];
+function bodyPopup(){
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("bodyBtn");
+  var span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
 
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
+  span.onclick = function() {
     modal.style.display = "none";
   }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 }
+bodyPopup()
+
+
+//// measurement page insulin popup //////
+function insulinPopup(){
+  var modal = document.getElementById("myModal1");
+  var btn = document.getElementById("insulinBtn");
+  var span = document.getElementsByClassName("close1")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+insulinPopup()
+
+//// measurement page glucose popup //////
+function glucosePopup(){
+  var modal = document.getElementById("myModal2");
+  var btn = document.getElementById("glucoseBtn");
+  var span = document.getElementsByClassName("close2")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+glucosePopup()
   

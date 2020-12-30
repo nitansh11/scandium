@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./nutrition.css" />
+    <title>NUTRITION</title>
+  </head>
+  <body>
+    <div class="nutrition">
+    <!-- NAVIGATION  BAR -->
+      <div class="nutrition__navigation">
+        <button class="nutrition__navigation__nutrition-btn" value="nutrition">
+          <i class="material-icons">local_dining</i>
+          <p>NUTRITION</p>
+        </button>
+        <button class="nutrition__navigation__macros-btn" value="macros">
+          <i class="material-icons">pie_chart</i>
+          <p>MACROS</p>
+        </button>
+        <button class="nutrition__navigation__exersise-btn" value="exersise">
+          <i class="material-icons">directions_run</i>
+          <p>EXERSISE</p>
+        </button>
+        <button class="nutrition__navigation__fasting-btn" value="fasting">
+          <i class="material-icons">access_time</i>
+          <p>FASTING</p>
+        </button>
+        <button class="nutrition__navigation__hydrogen-btn" value="hydrogen">
+            <i class="material-icons">local_drink</i>
+            <p>HYDROGEN</p>
+          </button>
+          <button class="nutrition__navigation__sleep-btn" value="sleep">
+            <i class="material-icons">hotel</i>
+            <p>SLEEP</p>
+          </button>
+      </div>
+      <!-- NUTRIRION  char bar BLOG -->
+      <div id="nutrition" class="nutrition__content nutrition__content--nutrition">
+        <div class="nutrition__content--nutrition__chart-box">
+          <select class="nutrition__carb">
+            <option>Net Carbs (G)</option>
+          </select>
+          <select class="nutrition__history" id="change_chart"name="change_chart">
+            <option value="7"> last 7 days</option>
+            <option value="14">Last 14 days</option>
+          </select>
+          <div class="nutrition__content--nutrition__chart">
+            <canvas
+              id="myChart"
+              aria-label="chart"
+              role="img"
+              width="1000"
+              height="380"
+            ></canvas>
+          </div>
+          <p>Nutrition is the cornerstone of effective, sustainable weight loss and a healthy lifestyle. Use these charts 
+            alongside your goals to track how closely you are adhering to your diet plan.</p>
+        </div>
+      </div>
+      <div id="macros" class="nutrition__content nutrition__content--macros">
+        <h2>In Depth</h2>
+      </div>
+
+
+      <!-- EXERSISE BLOG -->
+      <div id="exersise" class="nutrition__content nutrition__content--exersise">
+        <div class="exersise__content--exersise__chart-box">
+          <select class="exersise__carb">
+            <option>Net Crabs (G)</option>
+          </select>
+          <select class="exersise__history">
+            <option>Last 7 days</option>
+            <option>Last 14 days</option>
+          </select>
+          <div class="exersise__content--exersise__chart">
+            <canvas
+              id="chart__exersise"
+              aria-label="chart"
+              role="img"
+              width="1000"
+              height="380"
+            ></canvas>
+          </div>
+          <p>Daily exercise helps to burn calories, increase metabolism, increase insulin sensistivity, 
+            and improve all around well-being. If you are in good health, try to get at least 20 minutes 
+            a day of moderate intensity exercise, or 10 minutes a day of high intensity exercise. Also consider 
+            adding step counting to your daily route. Use a Fitbit, iPhone, or other fitness 
+            device to measure your steps, which will import here. Aim for about 10,000 steps a day.</p>
+        </div>
+      </div>
+
+
+      <!-- FASTING BLOG -->
+      <div id="fasting" class="nutrition__content nutrition__content--fasting">
+        <!-- <div class="fasting__content--fasting__chart-box">
+          <select class="fasting__carb">
+            <option>Net Crabs (G)</option>
+          </select>
+          <select class="fasting__history">
+            <option>Last 7 days</option>
+            <option>Last 14 days</option>
+          </select>
+          <div class="fasting__content--fasting__chart">
+            <canvas
+              id="chart__fasting"
+              aria-label="chart"
+              role="img"
+              width="1000"
+              height="380"
+            ></canvas>
+          </div>
+          <p>Daily exercise helps to burn calories, increase metabolism, increase insulin sensistivity, 
+            and improve all around well-being. If you are in good health, try to get at least 20 minutes 
+            a day of moderate intensity exercise, or 10 minutes a day of high intensity exercise. Also consider 
+            adding step counting to your daily route. Use a Fitbit, iPhone, or other fitness 
+            device to measure your steps, which will import here. Aim for about 10,000 steps a day.</p>
+        </div> -->
+      </div>
+
+
+
+        <!-- HYDROGEN blog -->
+      <div id="hydrogen" class="nutrition__content nutrition__content--hydrogen">
+        <div class="hydrogen__content--hydrogen__chart-box">
+          <select class="hydrogen__carb">
+            <option>Net Crabs (G)</option>
+          </select>
+          <select class="hydrogen__history">
+            <option>Last 7 days</option>
+            <option>Last 14 days</option>
+          </select>
+          <div class="hydrogen__content--hydrogen__chart">
+            <canvas
+              id="chart__hydrogen"
+              aria-label="chart"
+              role="img"
+              width="1000"
+              height="380"
+            ></canvas>
+          </div>
+          <p>A 2016
+            study in the Annals of Family Medicine suggested that there may be a 
+            link between inadequate water intake and excess bodyweight. 
+            For most people, 8 cups of water (8 oz) is sufficient, and best consumed 
+            before meals to suppress appetite.</p>
+        </div>
+      </div>
+
+
+      <!-- SLEEP BLOG -->
+      <div id="sleep" class="nutrition__content nutrition__content--sleep">
+        <div class="sleep__content--sleep__chart-box">
+          <select class="sleep__carb">
+            <option>Net Crabs (G)</option>
+          </select>
+          <select class="sleep__history">
+            <option>Last 7 days</option>
+            <option>Last 14 days</option>
+          </select>
+          <div class="sleep__content--sleep__chart">
+            <canvas
+              id="chart__sleep"
+              aria-label="chart"
+              role="img"
+              width="1000"
+              height="380"
+            ></canvas>
+          </div>
+          <p>Getting enough sleep will help you feel great and lose weight. 
+            Numerous studies have shown that sleep deprivation can cause food cravings,
+             especially for high-carbohydrate foods.
+             Aim to get 7-9 hours of quality sleep per night..</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+    <script src="./nutrition.js"></script>
+  </body>
+</html>

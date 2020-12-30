@@ -11,63 +11,298 @@
     <title>My Daily Log</title>
   </head>
   <body>
-    <div class="foods">
-      <div class="foods__navigation">
-        <button class="foods__navigation__my-day-btn" value="my-day">
-          <i class="material-icons">search</i>
-          <p>SEARCH</p>
-        </button>
-        <button class="foods__navigation__in-depth-btn" value="in-depth">
-          <i class="material-icons">star</i>
-          <p>QUICK FIND</p>
-        </button>
-        <button class="foods__navigation__water-btn" value="water">
-          <i class="material-icons">face</i>
-          <p>MY FOODS</p>
-        </button>
-        <button class="foods__navigation__steps-btn" value="steps">
-          <i class="material-icons">line_weight</i>
-          <p>SCAN</p>
-        </button>
-        <button class="foods__navigation__steps-btn" value="steps">
-          <i class="material-icons">camera</i>
-          <p>SNAP</p>
-        </button>
-        <button class="foods__navigation__steps-btn" value="steps">
-          <i class="material-icons">lightbulb_outline</i>
-          <p>MACROS FINDER</p>
-        </button>
-        <button class="foods__navigation__steps-btn" value="steps">
-          <i class="material-icons">receipt</i>
-          <p>RECIPES & MEAL PLANS</p>
-        </button>
-        <button class="foods__navigation__steps-btn" value="steps">
-          <i class="material-icons">chat_bubble</i>
-          <p>SAY</p>
-        </button>
-        <button class="foods__navigation__steps-btn" value="steps">
-          <i class="material-icons">whatshot</i>
-          <p>QUICK ENTRY</p>
-        </button>
+    <!-- Food Section (Nitansh) -->
+    <div class="dashboard-main">
+      <div class="dashboard-main__nav">
+        <ul>
+          <li>
+            <i class="material-icons">dashboard</i
+            ><a href="../daily_log/daily_log.html">My Daily Log</a>
+          </li>
+          <li class="active">
+            <i class="material-icons">local_dining</i><a href="#">Foods</a>
+          </li>
+          <li>
+            <i class="material-icons">fitness_center</i
+            ><a href="../exercises/index.html">Exercise</a>
+          </li>
+          <li>
+            <i class="material-icons">trending_down</i
+            ><a href="#home">My Measurements</a>
+          </li>
+          <li>
+            <i class="material-icons">spa</i
+            ><a href="#home">My Nutrition & Wellness</a>
+          </li>
+          <li>
+            <i class="material-icons">people</i><a href="../comunity/comunity.html">Community</a>
+          </li>
+          <hr />
+          <li>
+            <i class="material-icons">lightbulb_outline</i
+            ><a href="#home">Analysis</a>
+          </li>
+          <li>
+            <i class="material-icons">library_books</i
+            ><a href="#home">KetoGenius Diet Plan</a>
+          </li>
+          <li>
+            <i class="material-icons">list</i
+            ><a href="#home">Recipes and Meal Plans</a>
+          </li>
+          <li>
+            <i class="material-icons">today</i><a href="#home">Meal Planner</a>
+          </li>
+          <li>
+            <i class="material-icons">print</i><a href="#home">Reports</a>
+          </li>
+          <hr />
+          <li>
+            <i class="material-icons">stars</i><a href="#home">Go Premium</a>
+          </li>
+          <li>
+            <i class="material-icons">settings</i><a href="#home">Settings</a>
+          </li>
+          <li>
+            <i class="material-icons">lightbulb_outline</i
+            ><a href="#home">Getting Started</a>
+          </li>
+          <li>
+            <i class="material-icons">school</i
+            ><a href="#home">Learn About Keto</a>
+          </li>
+        </ul>
       </div>
-
-      <div id="my-day" class="foods__content foods__content--my-day">
-        <h2>My Day</h2>
+      <div class="foods">
+        <div class="foods__navigation">
+          <button class="foods__navigation__my-day-btn" value="search">
+            <i class="material-icons">search</i>
+            <p>SEARCH</p>
+          </button>
+          <button class="foods__navigation__in-depth-btn" value="quick-find">
+            <i class="material-icons">star</i>
+            <p>QUICK FIND</p>
+          </button>
+          <button class="foods__navigation__water-btn" value="my-food">
+            <i class="material-icons">face</i>
+            <p>MY FOODS</p>
+          </button>
+          <button class="foods__navigation__steps-btn" value="scan">
+            <i class="material-icons">line_weight</i>
+            <p>SCAN</p>
+          </button>
+          <button class="foods__navigation__steps-btn" value="snap">
+            <i class="material-icons">camera</i>
+            <p>SNAP</p>
+          </button>
+          <button class="foods__navigation__steps-btn" value="macros-finder">
+            <i class="material-icons">lightbulb_outline</i>
+            <p>MACROS FINDER</p>
+          </button>
+          <button class="foods__navigation__steps-btn" value="recipes">
+            <i class="material-icons">receipt</i>
+            <p>RECIPES & MEAL PLANS</p>
+          </button>
+          <button class="foods__navigation__steps-btn" value="say">
+            <i class="material-icons">chat_bubble</i>
+            <p>SAY</p>
+          </button>
+          <button class="foods__navigation__steps-btn" value="quick-entry">
+            <i class="material-icons">whatshot</i>
+            <p>QUICK ENTRY</p>
+          </button>
+        </div>
+  
+        <!-- Food_search -->
+        <div id="search" class="foods__content foods__content--search">
+          <div class="foods__content--search__input">
+            <i class="material-icons">search</i>
+            <input
+              type="text"
+              name="search"
+              id="searchInput1"
+              placeholder="Search"
+            />
+          </div>
+          <div class="foods__content--search__dropdown">
+            <button>Get Ideas For Breakfast</button>
+          </div>
+          <div class="foods__content--search__list">
+            <!-- <div class="foods__content--search__list-item">
+              <img
+                src="https://app.carbmanager.com/statics/food/i302.png"
+                alt="food-image"
+              />
+              <p>Egg</p>
+            </div> -->
+        </div>
+        <div id="food-detail-modal">
+          <div class="food-detail-modal__content">
+            <div id="form-top">
+              <span class="food-detail-modal-close" style="color:white">&times;</span>
+              <p>Eggs</p>
+              <button>Add Food Item</button>
+            </div>
+         
+            <div class="food-detail-modal__content__chart-box">
+              <div class="food-detail-modal__content__chart">
+                <canvas
+                  id="myChartFoodDetail"
+                  aria-label="chart"
+                  role="img"
+                  width="1000"
+                  height="250"
+                ></canvas>
+              </div>
+              <div class="food-detail-modal__content__table">
+                  <div class="food-detail-modal__content__table__row">
+                      <p>Nutrition</p>
+                      <p>Value</p>
+                  </div>
+                  <div class="food-detail-modal__content__table__row">
+                    <p>Energy</p>
+                    <p>77</p>
+                  </div>
+                  <div class="food-detail-modal__content__table__row">
+                    <p>Protein</p>
+                    <p>7</p>
+                  </div>
+                  <div class="food-detail-modal__content__table__row">
+                      <p>Fat</p>
+                      <p>5.3</p>
+                  </div>
+                  <div class="food-detail-modal__content__table__row">
+                    <p>Carbohydrates</p>
+                    <p>3</p>
+                  </div>
+                 
+              </div>
+            </div>
+           
+          </div>
+        </div>
+       
+        <!-- Quick Find -->
+        <div id="quick-find" class="foods__content foods__content--quick-find">
+          <div class="foods__content--search__input">
+            <i class="material-icons">search</i>
+            <input
+              type="text"
+              name="search"
+              id="searchInput2"
+              placeholder="Search"
+            />
+          </div>
+        </div>
+  
+        <!-- My Food -->
+        <div id="my-food" class="foods__content foods__content--my-food">
+          <div class="foods__content--search__input">
+            <i class="material-icons">search</i>
+            <input
+              type="text"
+              name="search"
+              id="searchInput3"
+              placeholder="Search"
+            />
+          </div>
+        </div>
+  
+        <!-- Scan -->
+        <div id="scan" class="foods__content foods__content--scan">
+          <h1>Mobile Only Feature!</h1>
+        </div>
+  
+        <!-- Snap -->
+        <div id="snap" class="foods__content foods__content--snap">  <h1>Mobile Only Feature!</h1></div>
+  
+        <!-- Macros Finder -->
+        <div
+          id="macros-finder"
+          class="foods__content foods__content--macros-finder"
+        >
+        <h1>Premium Users Only!</h1>
+        </div>
+  
+        <!-- Recipes -->
+        <div id="recipes" class="foods__content foods__content--recipes">
+          Recipes
+        </div>
+  
+        <!-- Say -->
+        <div id="say" class="foods__content foods__content--say">
+          <textarea
+            name="say-textarea"
+            id="say-textarea"
+            cols="30"
+            rows="10"
+            placeholder="Enter some food names and serving sizes using natural language (the way you would talk to a person), tap Submit, then log each food suggestion from the list below. Use as many lines as you like. Some examples: Two eggs, some yogurt, and two slices of bacon. 1 and a half cups of blueberry smoothie. Lettuce, cucumber, and tomato with ranch dressing. Apple with peanut butter."
+          ></textarea>
+          <button>Submit</button>
+        </div>
+        <!-- Quick Entry -->
+        <div
+          id="quick-entry"
+          class="foods__content foods__content--quick-entry-modal"
+        >
+          <!-- Modal Body-->
+          <div class="foods__content--quick-entry-modal-content">
+           
+            <div id="form-top">
+              <span class="foods__content--quick-entry-modal-close" style="color:white">&times;</span>
+              <p>New Quick Entry</p>
+              <button>Add Food Item</button>
+             
+            </div>
+            <form class="foods__content--quick-entry-form">
+             
+              <div id="nameDiv">
+                <label for="name">Food Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="eg: Muesli"
+                  name="name"
+                />
+              </div>
+              <div id="energyDiv">
+                <label for="energy">Energy (calories)</label>
+                <input
+                  type="text"
+                  id="energy"
+                  placeholder="eg:1560"
+                  name="energy"
+                />
+              </div>
+              <div id="proteinDiv">
+                <label for="protein">Protein</label>
+                <input
+                  type="text"
+                  id="protein"
+                  placeholder="eg:12.3"
+                  name="protein"
+                />
+              </div>
+              <div id="fatDiv">
+                <label for="fat">Fat</label>
+                <input type="text" id="fat" placeholder="eg:9.9" name="fat" />
+              </div>
+              <div id="carbsDiv">
+                <label for="carbs">Carbohydrates</label>
+                <input
+                  type="text"
+                  id="carbs"
+                  placeholder="eg:51.7"
+                  name="carbs"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <div
-        id="in-depth"
-        class="foods__content foods__content--in-depth"
-      >
-        <h2>In Depth</h2>
-      </div>
-      <div id="water" class="foods__content foods__content--water">
-        <h2>Water</h2>
-      </div>
-      <div id="steps" class="foods__content foods__content--steps">
-        <h2>Steps</h2>
-      </div>
+  
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <script src="./foods.js"></script>
   </body>
 </html>
