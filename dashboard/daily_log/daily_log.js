@@ -64,15 +64,15 @@ let fullGlassImages = document.querySelectorAll('img[alt="full_glass"]')
       console.log(waterObjIndex)
       if(waterObjIndex!==-1){
         console.log("if")
-          currentUser.steps[waterObjIndex]={...waterObj};
+          currentUser.waterLog[waterObjIndex]={...waterObj};
       }
       else{
         console.log("else")
-        currentUser.steps.push({...waterObj}); 
+        currentUser.waterLog.push({...waterObj}); 
       }
     }
     else{
-      currentUser.steps=[{...waterObj}];
+      currentUser.waterLog=[{...waterObj}];
     }
   }
   localStorage.setItem("currentUser",JSON.stringify(currentUser));
