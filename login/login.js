@@ -4,4 +4,5 @@ function onSignIn(googleUser){
     console.log(profile);
     console.log(profile.getImageUrl());
     console.log(profile.getEmail()); 
+    window.location.href = "../dashboard/daily_log/daily_log.html";
 }
