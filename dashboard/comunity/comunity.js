@@ -1,7 +1,7 @@
 const getSection = (e) => {
     let button = e.currentTarget;
     var i;
-    var x = document.getElementsByClassName("daily-log__content");
+    var x = document.getElementsByClassName("community__content");
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";
     }
@@ -18,7 +18,7 @@ const getSection = (e) => {
     button.style.color = "#616161";
     button.querySelector("p").style.color = "#616161";
   };
-  let allButtons = document.querySelectorAll(".daily-log__navigation button");
+  let allButtons = document.querySelectorAll(".community__navigation button");
   allButtons.forEach((button) => {
     button.addEventListener("click", (e) => getSection(e));
   });
@@ -70,3 +70,92 @@ const getSection = (e) => {
     }
   }
   document.getElementById("rules").innerHTML=output
+// newsfeed post
+var app=document.getElementById("comments")
+document.getElementById("newsfeed__post").addEventListener("click",post)
+function post(){
+  var elements=document.getElementById("newsfeed__comment").value;
+  var div=document.createElement("div")
+  div.innerHTML=`<div><div class="post_image"><img src="https://app.carbmanager.com/statics/avatar-blank.jpg"></div>
+                  <div class="Anonymous"><p class="small">Anonymous</p>
+                  <p>${elements}</p>
+                  <p><b class="small">Edit</b> | <b class="small">Reply</b></p>
+                  </div></div>`
+  
+  app.append(div);
+}
+// GROUPS BLOG
+
+var group_data=[
+  {
+    image:"https://app.carbmanager.com/statics/emoji/1f951.svg",
+    name:"Keto Diet",
+    goal:"At or under carb goal",
+    number:1172
+  },
+  {
+    image:"https://app.carbmanager.com/statics/emoji/2696.svg",
+    name:"50+ Pounds To Lose",
+    goal:"At or under calorie goal",
+    number:1050
+  },
+  {
+    image:"https://app.carbmanager.com/statics/emoji/1f451.svg",
+    name:"Ketogenic Queens",
+    goal:"Within 10g of protein goal",
+    number:2052
+  },
+  {
+    image:"https://app.carbmanager.com/statics/emoji/1f457.svg",
+    name:"Keto kool moms",
+    goal:"Within 10g of fat goal",
+    number:5075
+  },
+  {
+    image:"https://app.carbmanager.com/statics/emoji/1f4aa.svg",
+    name:"Keto + IF (18:6-20:4)",
+    goal:"Met sleep goal (My Nutrition & Wellness > Sleep)",
+    number:2015
+  },
+  {
+    image:"https://app.carbmanager.com/statics/emoji/1f357.svg",
+    name:"Keto food & recipes",
+    goal:"Met daily steps goal",
+    number:10
+  },
+  {
+    image:"https://app.carbmanager.com/statics/emoji/1f6b6.svg",
+    name:" Walkers & Fitbit Users",
+    goal:"Burned at least 200 calories exercising",
+    number:10
+  }
+]
+let render_lists=function(data){
+var group__output="";
+for(var i=0;i<data.length;i++){
+    group__output+=`<div>
+                      <div>
+                        <img src=${data[i].image}>
+                      </div>
+                      <div>
+                        <div class="group_name"><h1>${data[i].name}<h1></div>
+                        <div class="group_goal">${data[i].goal}</div>
+                        <div class="group_number">${data[i].number} members</div>
+                      </div>
+                    </div>`
+}
+document.getElementById("groups__content1").innerHTML=group__output;
+}
+render_lists(group_data);
+
+var input=document.getElementById("groups__content__search");
+let filtersearch=function(event){
+  keyword=input.value.toLowerCase();
+filter_search=group_data.filter(function(data){
+  data.name=data.name.toLowerCase();
+  return data.name.indexOf(keyword)>-1;
+});
+render_lists(filter_search);
+
+}
+input.addEventListener('keyup',filtersearch)

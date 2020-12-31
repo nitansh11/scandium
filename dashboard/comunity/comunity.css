@@ -51,7 +51,7 @@
   }
   
 /*****************************/
-.daily-log{
+.community{
     width: 100%;
     /* border: 1px solid gray; */
     margin: auto;
@@ -63,13 +63,13 @@
 }
 
 /****************************/
-.daily-log__navigation{
+.community__navigation{
     height: 50px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(6,16.6%);  
 }
-.daily-log__navigation button{
+.community__navigation button{
     border: none;
     outline: none;
     cursor: pointer;
@@ -78,26 +78,26 @@
     padding-bottom: 10px; 
 }
 
-.daily-log__navigation button:first-child{
+.community__navigation button:first-child{
    border-bottom : 2px solid #616161;
     color :#616161;  
 }
-.daily-log__navigation button:first-child :placeholder-shown{
+.community__navigation button:first-child :placeholder-shown{
     color : #616161;
 }
-.daily-log__navigation p{
+.community__navigation p{
     font-size: 20px;
     color: rgb(159,159,159);
 }
 /****************************/
-.daily-log__content{
+.community__content{
     display: none;
     width: 95%;
     /* border: 1px solid gray; */
     margin: 10px auto;
     padding: 10px;
 }
-.daily-log__content:nth-child(2){
+.community__content:nth-child(2){
     display: block; 
 }
 
@@ -137,7 +137,7 @@
     margin:5px auto;
     color:grey;
 }
-.newsfeed>div>div>h3:hover{
+.newsfeed>div>div>h3:hover,.small:hover{
     color: blue;
 }
 .newsfeed__post{
@@ -162,6 +162,30 @@
 }
 h2{
     margin: 20px ;
+}
+#comments{
+    display: flex;
+    flex-direction: column;
+}
+#comments>div>div{
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+.post_image>img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+.Anonymous{
+line-height: 35px;
+font-size: 25px;
+cursor: pointer;
+}
+.small{
+    color:rgb(170, 170, 236);
+}
+b{
+    font-size: 15px;
 }
 
 /* friends blog */
@@ -213,9 +237,9 @@ h2{
     cursor: pointer;
 }
 .stories__image>div>img{
-    width: 200px;
-    height: 200px;
-    margin: 15px;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
 }
 .stories__image>div>p{
     margin: 15px;
@@ -265,3 +289,58 @@ h2{
 
 
 /* Group blog */
+
+.groups{
+    width: 80%;
+    box-shadow :2px 2px 2px 2px rgb(151, 145, 145);
+    margin:100px auto;
+}
+.groups__header{
+    background-color: #F4F4F4;
+    display: grid;
+    grid-template-columns:85% 15% ;
+}
+.groups__search{
+    height: 50px;
+    width: 90%;
+    margin: 30px auto;
+    box-shadow :1px 1px 1px 1px rgb(151, 145, 145);
+
+}
+.groups__search>div{
+    display: grid;
+    grid-template-columns: 4% 96%;
+    justify-content: center;
+}
+.groups__search>div>i{
+    margin:1px auto;
+}
+.groups__search>div>input{
+    border:1px solid white;
+    height: 30px;
+    margin: 5px;
+}
+.groups__content{
+    width: 90%;
+    margin: 20px auto;
+}
+.groups__content>div{
+    margin:30px;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    border-bottom:1px solid grey ;
+    cursor: pointer;
+}
+.groups__content>div>div{
+    margin:10px;
+}
+.groups__content>div:hover{
+    background-color: grey;
+}
+.group_name,.group_goal,.group_number{
+    font-size: 15px;
+    margin:  2px;
+}
+.group_goal{
+    font-size: 30px;
+}
