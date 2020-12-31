@@ -2,11 +2,63 @@
     margin: 0;
     padding: 0;
 }
+/****************************************** Dashboard Navigation (Nitansh)***************************************/
+
+.dashboard-main {
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+  
+  hr {
+    border-top: 1px solid rgba(128, 128, 128, 0.445);
+  }
+  .dashboard-main__nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow-y: auto;
+    height: 100vh;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .dashboard-main__nav li {
+    display: flex;
+    /* grid-template-columns: 20% 80%; */
+    margin: 0px auto;
+    align-items: center;
+    padding: 10px;
+  }
+  .dashboard-main__nav li a {
+    display: block;
+    color: rgba(0, 0, 0, 0.76);
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .dashboard-main__nav li.active {
+    background-color: #cccccc;
+  }
+  
+  .dashboard-main__nav li:hover:not(.active) {
+    background-color: #cccccc;
+  }
+  
+  .dashboard-main__nav li i {
+    color: gray;
+  }
+  /*****************************/
 /*****************************/
 .nutrition{
     width: 100%;
     /* border: 1px solid gray; */
     margin: auto;
+    overflow-y: auto;
+    height: 100vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 /****************************/
