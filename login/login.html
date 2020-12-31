@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-signin-client_id" content="508423535071-5mogpmfvf4pcuo12au24rbn9us8747vr.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="login">
+        <div class="login__nav">
+            <img src="https://app.carbmanager.com/statics/icon-rounded.png" alt="logo">
+        </div>
+      <div class="login__box">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <p>Welcome Back to Carb Manager</p>
+        <form>
+          <div class="login__box__email">
+            <label for="email">Email</label>
+            <input type="text" id="email" />
+          </div>
+          <div class="login__box__password">
+            <label for="password">Password</label>
+            <input type="text" id="passowrd" />
+            <p>Forgot your password?</p>
+          </div>
+          <div>
+           <a href="../dashboard/daily_log/daily_log.html">LOG IN NOW</a>
+            <div>
+                <p>Don't have an account? <span>Join Here</span></p>
+            </div>
+          </div>
+         
+        </form>
+      </div>
+     
+    </div>
+    <!-- 508423535071-5mogpmfvf4pcuo12au24rbn9us8747vr.apps.googleusercontent.com -->
+    <script src="./login.js"></script>
+  </body>
+</html>
