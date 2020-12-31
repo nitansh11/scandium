@@ -17,7 +17,6 @@ const getSection = (e) => {
   }
   document.getElementById(e.currentTarget.value).style.display = "block";
   //Changing color on select
-
   let allButtons = button.parentNode.querySelectorAll("button");
   allButtons.forEach((button) => {
     button.style.borderBottom = "none";
@@ -28,6 +27,9 @@ const getSection = (e) => {
   button.style.color = "#616161";
   button.querySelector("p").style.color = "#616161";
 };
+
+
+
 let allButtons = document.querySelectorAll(".daily-log__navigation button");
 allButtons.forEach((button) => {
   button.addEventListener("click", (e) => getSection(e));
@@ -51,95 +53,110 @@ const glassClicked = (glassImg) => {
     glassImg.src = "https://app.carbmanager.com/statics/glass_empty.png";
   }
 
-let fullGlassImages = document.querySelectorAll('img[alt="full_glass"]')
+  let fullGlassImages = document.querySelectorAll('img[alt="full_glass"]');
   let currentUser = localStorage.getItem("currentUser");
-  let waterObj={
+  let waterObj = {
     date: currentDate,
     noOfGlasses: fullGlassImages.length,
   };
-  if(currentUser){
-    currentUser=JSON.parse(currentUser);
-    if(currentUser.waterLog){
-      let waterObjIndex = currentUser.waterLog.findIndex(currentWaterObj=>currentWaterObj.date===waterObj.date);
-      console.log(waterObjIndex)
-      if(waterObjIndex!==-1){
-        console.log("if")
-          currentUser.waterLog[waterObjIndex]={...waterObj};
+  if (currentUser) {
+    currentUser = JSON.parse(currentUser);
+    if (currentUser.waterLog) {
+      let waterObjIndex = currentUser.waterLog.findIndex(
+        (currentWaterObj) => currentWaterObj.date === waterObj.date
+      );
+      console.log(waterObjIndex);
+      if (waterObjIndex !== -1) {
+        console.log("if");
+        currentUser.waterLog[waterObjIndex] = { ...waterObj };
+      } else {
+        console.log("else");
+        currentUser.waterLog.push({ ...waterObj });
       }
-      else{
-        console.log("else")
-        currentUser.waterLog.push({...waterObj}); 
-      }
-    }
-    else{
-      currentUser.waterLog=[{...waterObj}];
+    } else {
+      currentUser.waterLog = [{ ...waterObj }];
     }
   }
-  localStorage.setItem("currentUser",JSON.stringify(currentUser));
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
 };
 
 /*********************Steps Section Javascript (Nitansh)********************** */
 
-let ctx1 = document.getElementById("myChart-steps").getContext("2d");
 
-let myChartSteps = new Chart(ctx1, {
-  type: "bar",
-  data: {
-    labels: ["We", "Th", "Fr", "Sa", "Su", "Mo", "Tu"],
-    datasets: [
-      {
-        // data: [10000, 10000, 10000, 10000, 10000, 10000, 10000],
-        data: [10000, 10000, 10000, 10000, 10000, 10000, 10000],
-        backgroundColor: [
-          "#1BC98E",
-          "#36A2EB",
-          "#FF6384",
-          "#1BC98E",
-          "#36A2EB",
-          "#FF6384",
-          "#36A2EB",
+let stepsArr = JSON.parse(localStorage.getItem("currentUser")).steps;
+let lastSevenData = [];
+let lastSevenLabels = [];
+let backGroundColorArr=[];
+let backgroundColorRandomArr= [
+  "#1BC98E",
+  "#36A2EB",
+  "#FF6384",
+  "#1BC98E",
+];
+for(let i = 0; i < stepsArr.length; i++) {
+  lastSevenData.push(stepsArr[i].stepsCount);
+  lastSevenLabels.push(stepsArr[i].date);
+  backGroundColorArr.push(backgroundColorRandomArr[Math.floor(Math.random()*backgroundColorRandomArr.length)])
+}
+console.log(lastSevenLabels,lastSevenData,backGroundColorArr)
+renderStepsChart(lastSevenData,lastSevenLabels,backGroundColorArr);
+function renderStepsChart(lastSevenData,lastSevenLabels,backGroundColorArr){
+  
+  let ctx1 = document.getElementById("myChart-steps").getContext("2d");
+
+    let myChartSteps = new Chart(ctx1, {
+      type: "bar",
+      data: {
+        labels: lastSevenLabels,
+        datasets: [
+          {
+            // data: [10000, 10000, 10000, 10000, 10000, 10000, 10000],
+            data: lastSevenData,
+            backgroundColor:backGroundColorArr,
+          },
         ],
       },
-    ],
-  },
-  options: {
-    layout: {
-      padding: {
-        left: 30,
-        right: 30,
-        top: 30,
-        bottom: 30,
+      options: {
+        layout: {
+          padding: {
+            left: 30,
+            right: 30,
+            top: 30,
+            bottom: 30,
+          },
+        },
+  
+        legend: {
+          display: false,
+        },
+  
+        scales: {
+          xAxes: [
+            {
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+              },
+            },
+          ],
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                // steps: 10,
+                // stepValue: 1000,
+                // max: 10000,
+              },
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+              },
+            },
+          ],
+        },
       },
-    },
+    });
+}
 
-    legend: {
-      display: false,
-    },
 
-    scales: {
-      xAxes: [
-        {
-          gridLines: {
-            color: "rgba(0, 0, 0, 0)",
-          },
-        },
-      ],
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
-            steps: 10,
-            stepValue: 1000,
-            max: 10000,
-          },
-          gridLines: {
-            color: "rgba(0, 0, 0, 0)",
-          },
-        },
-      ],
-    },
-  },
-});
 
 document
   .querySelector(".daily-log__content--steps__header i")
@@ -180,40 +197,37 @@ document
     $(function () {
       $("#datepicker").datepicker();
     });
-    
   });
 
-
-  function addSteps(e){
-    
-   let date = document.querySelector("#datepicker").value;
-   date=date.split('/');
-   date=date[0]+"-"+date[1]+"-"+date[2];
-   let steps = parseInt(document.querySelector("#stepsInput").value);
-  
-    let currentUser = localStorage.getItem("currentUser");
-    let stepsObj={date:date,stepsCount:steps};
-    if(currentUser){
-      currentUser=JSON.parse(currentUser);
-      if(currentUser.steps){
-        console.log("inside");
-        let stepObjIndex = currentUser.steps.findIndex(currentStepObj=>currentStepObj.date===stepsObj.date);
-        console.log(stepObjIndex)
-        if(stepObjIndex!==-1){
-          console.log("if")
-            currentUser.steps[stepObjIndex]={...stepsObj};
-        }
-        else{
-          console.log("else")
-          currentUser.steps.push({...stepsObj}); 
-        }
+function addSteps(e) {
+  let date = document.querySelector("#datepicker").value;
+  date = date.split("/");
+  date = date[0] + "-" + date[1] + "-" + date[2];
+  let steps = parseInt(document.querySelector("#stepsInput").value);
+  let currentUser = localStorage.getItem("currentUser");
+  let stepsObj = { date: date, stepsCount: steps };
+  if (currentUser) {
+    currentUser = JSON.parse(currentUser);
+    if (currentUser.steps) {
+      console.log("inside");
+      let stepObjIndex = currentUser.steps.findIndex(
+        (currentStepObj) => currentStepObj.date === stepsObj.date
+      );
+      console.log(stepObjIndex);
+      if (stepObjIndex !== -1) {
+        console.log("if");
+        currentUser.steps[stepObjIndex] = { ...stepsObj };
+      } else {
+        console.log("else");
+        currentUser.steps.push({ ...stepsObj });
       }
-      else{
-        currentUser.steps=[{...stepsObj}];
-      }
+    } else {
+      currentUser.steps = [{ ...stepsObj }];
     }
-    localStorage.setItem("currentUser",JSON.stringify(currentUser));
   }
+  localStorage.setItem("currentUser",JSON.stringify(currentUser));
+  window.location.reload();
+}
 /*********************In Depth Section Javascript (Nitansh)********************** */
 
 let ctx = document.getElementById("myChart").getContext("2d");

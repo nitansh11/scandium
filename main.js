@@ -31,5 +31,5 @@ let obj = {name:"Nitansh Rastogi",email:"nitansh11@gmail.com",waterLog:[
     {date: "29-12-2020", noOfGlasses: 2},
     {date: "30-12-2020", noOfGlasses: 7},
     {date: "31-12-2020", noOfGlasses: 11}
-]};
+],steps:[]};
 localStorage.setItem("currentUser",JSON.stringify(obj));
