@@ -222,3 +222,20 @@ function renderFoodDetailsModal(food) {
     },
   });
 }
+/***************Food Search 1***************/
+function searchFilter1(){
+  var input, filter, listDivs, p, i, txtValue;
+  input = document.getElementById("searchInput1");
+  filter = input.value.toUpperCase();
+  
+  listDivs = document.querySelectorAll('.foods__content--search__list-item');
+  for (i = 0; i < listDivs.length; i++) {
+      p = listDivs[i].getElementsByTagName("p")[0];
+      txtValue = p.textContent || p.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          listDivs[i].style.display = "";
+      } else {
+          listDivs[i].style.display = "none";
+      }
+  }
+}
