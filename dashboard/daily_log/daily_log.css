@@ -131,13 +131,23 @@
 .daily-log__content--steps{
    width: 80%;
     margin:50px auto;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
+  
     
 }
-
+.daily-log__content--steps__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F4F4F4;
+    padding: 0 10px;
+}
+.daily-log__content--steps__header i {
+    cursor: pointer;
+}
 .daily-log__content--steps h3{
     padding: 20px;
-    background-color: #F4F4F4;
+   
 }
 .daily-log__content--steps__chart {
    
@@ -150,14 +160,94 @@
     padding: 20px;
     font-size: 12px;
 }
+/* The Modal (background) */
+.daily-log__content--steps__modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .daily-log__content--steps__modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+    height: 300px;
+  }
+  
+  /* The Close Button */
+  .stepsModal-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .stepsModal-close:hover,
+  .stepsModal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
+  .daily-log__content--steps__modal-content #stepsformDiv{
+      
+      margin-top: 20px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  .daily-log__content--steps__modal-content #stepsformDiv > div{
+   margin-bottom: 20px;
+  }
+
+  .daily-log__content--steps__modal-content #stepsformDiv label{
+    width:100%;
+    display: block;
+  }
+  .daily-log__content--steps__modal-content #stepsformDiv input{
+    width:100%;
+    padding: 5px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+}
+.daily-log__content--steps__modal-content #stepsformDiv button{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    width: 150px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 18px;
+}
+.daily-log__content--steps__modal-content #stepsformDiv button:hover{
+    background-color: white;
+    transition: 0.5s;
+    color: black;
+    border: 1px solid black;
+    font-size: 18px;
+}
+.daily-log__content--steps__modal-content #stepsformDiv button:active{
+    font-size: 16px;
+}
 /************************in depth content (Nitansh)**********************/
 .daily-log__content--in-depth{
     width: 80%;
     margin:50px auto;
-   
 }
-
 .daily-log__content--in-depth__chart-box{
     
     margin-bottom: 20px;
