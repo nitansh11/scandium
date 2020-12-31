@@ -7,6 +7,12 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="./daily_log.css" />
     <title>My Daily Log</title>
   </head>
@@ -15,11 +21,11 @@
       <div class="dashboard-main__nav">
         <ul>
           <li class="active">
-            <i class="material-icons">dashboard</i
-            ><a href="#">My Daily Log</a>
+            <i class="material-icons">dashboard</i><a href="#">My Daily Log</a>
           </li>
           <li>
-            <i class="material-icons">local_dining</i><a href="../foods/foods.html">Foods</a>
+            <i class="material-icons">local_dining</i
+            ><a href="../foods/foods.html">Foods</a>
           </li>
           <li>
             <i class="material-icons">fitness_center</i
@@ -34,7 +40,8 @@
             ><a href="#home">My Nutrition & Wellness</a>
           </li>
           <li>
-            <i class="material-icons">people</i><a href="../comunity/comunity.html">Community</a>
+            <i class="material-icons">people</i
+            ><a href="../comunity/comunity.html">Community</a>
           </li>
           <hr />
           <li>
@@ -368,7 +375,11 @@
 
         <!-- Steps Section (Nitansh) -->
         <div id="steps" class="daily-log__content daily-log__content--steps">
-          <h3>My Steps</h3>
+          <div class="daily-log__content--steps__header">
+            <h3>My Steps</h3>
+            <i class="material-icons">add</i>
+          </div>
+
           <div class="daily-log__content--steps__chart">
             <canvas
               id="myChart-steps"
@@ -378,7 +389,13 @@
               height="350"
             ></canvas>
           </div>
-
+          <!-- The Modal -->
+          <div id="stepsModal" class="daily-log__content--steps__modal">
+            <!-- Modal content -->
+            <div class="daily-log__content--steps__modal-content">
+             
+            </div>
+          </div>
           <p>
             Get movin'! Premium members can connect a fitness device to
             automatically import and track steps. To manually add steps, tap the
