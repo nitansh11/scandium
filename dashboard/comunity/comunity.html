@@ -8,7 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./comunity.css" />
-    <title>My Daily Log</title>
+    <title>COMMUNITY</title>
   </head>
   <body>
     <div class="dashboard-main">
@@ -74,29 +74,29 @@
         </ul>
       </div>
         <!-- Community NAVIGATION -->
-      <div class="daily-log">
-        <div class="daily-log__navigation">
-          <button class="daily-log__navigation__my-day-btn" value="my-day">
+      <div class="community">
+        <div class="community__navigation">
+          <button class="community__navigation__my-day-btn" value="my-day">
             <i class="material-icons">newsfeed_center</i>
             <p>NEWFEEDS</p>
           </button>
-          <button class="daily-log__navigation__in-depth-btn" value="in-depth">
+          <button class="community__navigation__in-depth-btn" value="in-depth">
             <i class="material-icons">person</i>
             <p>FRIENDS</p>
           </button>
-          <button class="daily-log__navigation__water-btn" value="water">
+          <button class="community__navigation__water-btn" value="water">
             <i class="material-icons">star</i>
             <p>CHALLENGES</p>
           </button>
-          <button class="daily-log__navigation__steps-btn" value="steps">
+          <button class="community__navigation__steps-btn" value="steps">
             <i class="material-icons">group</i>
             <p>GROUPS</p>
           </button>
-          <button class="daily-log__navigation__forum-btn" value="forum">
+          <button class="community__navigation__forum-btn" value="forum">
             <i class="material-icons">forum</i>
             <p>FORUM</p>
           </button>
-          <button class="daily-log__navigation__stories-btn" value="stories">
+          <button class="community__navigation__stories-btn" value="stories">
             <i class="material-icons">thumb_up</i>
             <p>STORIES</p>
           </button>
@@ -105,7 +105,7 @@
 
 
         <!-- NEWSFEED BLOG -->
-        <div id="my-day" class="daily-log__content daily-log__content--my-day">
+        <div id="my-day" class="community__content community__content--my-day">
           <div class="newsfeed">
             <div>
               <div><img src="https://app.carbmanager.com/statics/avatar-blank.jpg"></div>
@@ -116,16 +116,17 @@
             </div>
             <div>
               <div>
-                <input type="text" class="newsfeed__post" placeholder="Write Something.....">
-                <button class="newsfeed__button">POST</button>
+                <input type="text" class="newsfeed__post" placeholder="Write Something....."id="newsfeed__comment">
+                <button class="newsfeed__button" id="newsfeed__post">POST</button>
               </div>
             </div>
+            <div id="comments"></div>
           </div>
         </div>
 
 
         <!-- FRIENDS BLOG -->
-        <div id="in-depth" class="daily-log__content daily-log__content--in-depth">
+        <div id="in-depth" class="community__content community__content--in-depth">
           <div class="friends">
             <div class="friend__head">
                 <h2>My Friends & Family</h2>
@@ -147,7 +148,7 @@
 
 
         <!-- CHALLENGES -->
-        <div id="water" class="daily-log__content daily-log__content--water">
+        <div id="water" class="community__content community__content--water">
             <div class="challenges">
               <div class="challenges__rule"><p>The Carb Manager Challenge is on break for a few weeks. Check back soon for a new challenge!</p></div>
               <div><img src="https://app.carbmanager.com/statics/_1160500.png"></div>
@@ -169,16 +170,26 @@
               </div>
             </div>
         </div>
-        <div id="steps" class="daily-log__content daily-log__content--steps">
-          <h2>Steps</h2>
+        <div id="steps" class="community__content community__content--steps">
+          <div class="groups">
+            <div class="groups__header">
+              <h2>Populor Groups</h2>
+              <h2>+new</h2>
+            </div>
+            <div class="groups__search">
+              <div>
+                <i class="material-icons">search</i>
+                <input type="text" placeholder="SEARCH" id="groups__content__search">
+              </div>
+            </div>
+            <div class="groups__content" id="groups__content1"></div>
+          </div>
         </div>
-        <div id="forum" class="daily-log__content daily-log__content--forum">
+        <div id="forum" class="community__content community__content--forum">
           <h2>forum</h2>
         </div>
-
-
         <!-- STORIES BLOG -->
-        <div id="stories" class="daily-log__content daily-log__content--stories">
+        <div id="stories" class="community__content community__content--stories">
           <div class="stories">
             <div class="stories__head">
                 <h2>My Friends & Family</h2>
@@ -233,7 +244,6 @@
             </div>
           </div>
         </div>
-     
     </div>
   </div>
     <script src="./comunity.js"></script>
