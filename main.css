@@ -1,0 +1,490 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+
+  margin: 0px auto;
+}
+.main > div {
+}
+/********************Main Navigation (Nitansh)*********************/
+.main__navigation {
+  height: 55px;
+  background-color: #1bc98e;
+  display: flex;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  z-index: 100;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.main__navigation__logo {
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+  margin-left: 20px;
+}
+.main__navigation__logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.main__navigation__logo p {
+  color: white;
+}
+.main__navigation__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.main__navigation__list li {
+  color: white;
+  margin-right: 15px;
+}
+.main__navigation__list a{
+  text-decoration: none;
+  color: white;
+}
+/********************Main Banner (Nitansh)*********************/
+.main__banner {
+  height: 60vh;
+  background-image: url("./images/backBanner.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 35px;
+}
+.main__banner h1 {
+  color: white;
+  background-color: #1bc98e;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 80px;
+  padding: 20px 0px;
+  margin-top: 15vh;
+  margin-bottom: 8vh;
+}
+.main__banner button {
+  background-color: #027be3;
+  color: white;
+  display: block;
+  width: 250px;
+  border: none;
+  outline: none;
+  margin: 10px auto;
+  padding: 15px 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/********************Partners (Nitansh)*********************/
+
+.main__partners {
+  display: grid;
+  grid-template-columns: repeat(6, 16.66%);
+  padding: 20px;
+  justify-items: center;
+  background-color: #f4f4f4;
+}
+.main__partners div {
+  height: 60px;
+}
+.main__partners img {
+  width: 100%;
+}
+.main__partners > div:nth-child(1) {
+  width: 80px;
+}
+.main__partners > div:nth-child(2) {
+  width: 180px;
+}
+.main__partners > div:nth-child(3) {
+  width: 100px;
+}
+.main__partners > div:nth-child(4) {
+  width: 200px;
+}
+.main__partners > div:nth-child(5) {
+  width: 150px;
+}
+.main__partners > div:nth-child(6) {
+  width: 60px;
+}
+
+/********************Features (Nitansh)*********************/
+
+.main__features {
+  display: grid;
+  width: 65%;
+  margin: auto;
+  grid-template-columns: 70% 30%;
+  margin-top: 25px;
+}
+.main__features__content {
+  display: grid;
+  grid-template-columns: 100%;
+}
+.main__features__content__item {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+.main__features__content__item h6 {
+  font-size: 18px;
+}
+.main__features__content__item p {
+  width: 80%;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.main__features__image {
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+}
+.main__features__image img {
+  width: 100%;
+}
+/********************App Icons (Nitansh)*********************/
+.main__appicons {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  width: 95%;
+  margin: 0px auto;
+  margin-top: 60px;
+  justify-items: center;
+}
+.main__appicons_icon img{
+  width: 100%;
+}
+.main__appicons_icon{
+  align-items: center;
+}
+.main__appicons_icon div{
+ 
+  text-align: center;
+  margin-top: 5px;
+}
+
+.main__appicons_icon span {
+  color: #aaa9a9;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.main__appicons_icon i {
+  font-size: 14px;
+  color:#FF9800;
+}
+
+/********************Members (Nitansh)*********************/
+.main__members {
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  background-color: #f4f4f4;
+  padding: 20px 0px;
+  margin-top: 40px;
+}
+.main__members p {
+  background-color: #1bc98e;
+  color: white;
+  text-align: center;
+  width: 75%;
+  margin: auto;
+  font-size: 45px;
+  font-weight: bold;
+  padding: 15px 0px;
+}
+.main__members img {
+  width: 90%;
+  margin-top: 50px;
+}
+
+/********************Recipes (Nitansh)*********************/
+.main__recipes {
+  display: grid;
+  grid-template-columns: 100%;
+  width: 70%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.main__recipes > p:first-child {
+  color: #2e9dfd;
+  font-size: 35px;
+}
+.main__recipes__cards {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+}
+.main__recipes__card {
+  display: grid;
+  grid-template-columns: 100%;
+  padding: 10px 0;
+}
+
+.main__recipes__card img {
+  width: 100%;
+  max-height: 35vh;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+.main__recipes__card__content {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.main__recipes__card__content__text {
+  display: flex;
+  align-items: center;
+}
+.main__recipes__card__content__text p:first-child {
+  margin-right: 10px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.main__recipes__card__content__text span {
+  color: #aaa9a9;
+  font-size: 12px;
+  margin-right: 20px;
+}
+.main__recipes__card__content__text p:first-child {
+  font-size: 15px;
+}
+.main__recipes__card__content__text i {
+  font-size: 14px;
+  color: #ff5722;
+}
+.main__recipes__card__content__text div:last-child {
+  display: flex;
+  align-items: center;
+}
+.main__recipes__card__content__text div:last-child i {
+  font-size: 14px;
+  margin-right: 2px;
+  color: #aaa9a9;
+}
+.main__recipes__card__content__text div:last-child p {
+  font-size: 14px;
+  color: #aaa9a9;
+}
+
+.main__recipes__card__content__tags {
+  display: flex;
+}
+.main__recipes__card__content__tags > p {
+  color: white;
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 5px 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+.main__recipes__card__content__tags > p:nth-child(1) {
+  background-color: #1bc98e;
+}
+.main__recipes__card__content__tags > p:nth-child(2) {
+  background-color: rgb(54, 162, 235);
+}
+.main__recipes__card__content__tags > p:nth-child(3) {
+  background-color: #ff6384;
+}
+.main__recipes__card__content__tags > p:nth-child(4) {
+  background-color: #aaa9a9;
+}
+
+.main__recipes button {
+  width: 100%;
+  background-color: #1bc98e;
+  color: white;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/********************Articles (Nitansh)*********************/
+.main__articles {
+  display: grid;
+  grid-template-columns: 100%;
+  width: 70%;
+  margin: auto;
+  margin-top: 40px;
+}
+.main__articles > p:first-child {
+  color: #2e9dfd;
+  font-size: 35px;
+}
+.main__articles__cards {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+  margin-top: 15px;
+}
+.main__articles__card {
+  display: grid;
+  grid-template-columns: 100%;
+  padding: 10px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(189, 182, 182, 0.425);
+  margin-bottom: 20px;
+}
+.main__articles__card__heading {
+  position: relative;
+}
+.main__articles__card h3 {
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 95%;
+  text-align: center;
+  padding: 20px 0;
+  left: 14px;
+  font-size: 25px;
+}
+.main__articles__card img {
+  width: 95%;
+  max-height: 40vh;
+  object-fit: cover;
+  margin-bottom: 5px;
+  margin: auto;
+}
+
+.main__articles button {
+  width: 100%;
+  background-color: #1bc98e;
+  color: white;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.main__articles__card__last {
+  display: grid;
+  grid-template-columns: 100%;
+  width: 100%;
+}
+.main__articles__card__last h3 {
+  left: 27px;
+}
+
+/********************Popular Keto Foods (Nitansh)*********************/
+
+.main__popular {
+  display: grid;
+  grid-template-columns: 100%;
+  width: 70%;
+  margin: auto;
+  margin-top: 40px;
+}
+.main__popular h1 {
+  color: #2e9dfd;
+}
+.main__popular__list {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 20px;
+}
+.main__popular__list__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.main__popular__list__item p {
+  color: #2e9dfd;
+}
+.main__popular__list__item img {
+  margin-right: 20px;
+}
+
+.main__popular button {
+  width: 100%;
+  background-color: #1bc98e;
+  color: white;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/*******************Footer (Nitansh)*********************/
+.main__footer {
+  background-color: rgb(244, 244, 244);
+  padding: 80px 0px;
+  margin-top: 60px;
+}
+.main__footer h3 {
+  margin-bottom: 15px;
+  color: gray;
+}
+.main__footer__content {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  width: 70%;
+  margin: auto;
+  grid-column-gap: 20px;
+}
+.main__footer__about {
+  width: 90%;
+  color: gray;
+}
+.main__footer__about p {
+  font-size: 14px;
+  line-height: 25px;
+}
+.main__footer__about__images {
+  margin-top: 20px;
+}
+.main__footer__about__images img {
+  margin-right: 10px;
+}
+.main__footer__divein {
+}
+.main__footer__divein ul {
+  list-style: none;
+}
+.main__footer__connect ul {
+  list-style: none;
+}
+.main__footer ul li {
+  color: #2e9dfd;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+/********************Copyright (Nitansh)*********************/
+.main__copyright{
+  height: 25px;
+  background-color: #1bc98e;
+}
+.main__copyright p{
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  padding: 5px 0;
+  margin-bottom: 0;
+}
+.main__copyright span{
+  color: #2e9dfd;
+}
+
