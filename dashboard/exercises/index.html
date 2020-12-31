@@ -107,7 +107,33 @@
         </div>
   
         <div id="cardio" class="exercise__content exercise__content--cardio">
-            <input placeholder="search" class="cardio__input"/>
+            <!-- <input placeholder="search" class="cardio__input"/> -->
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="search" 
+                class="cardio__input" title="Type in a name">
+            <ul id="myUL">
+                <li><a href="#">Burpees</a></li>
+                <li><a href="#">Jump Rope</a></li>
+                <li><a href="#">Jumping Jacks</a></li>
+                <li><a href="#">Squat Jumps</a></li>
+                <li><a href="#">High Knees</a></li>
+                <li><a href="#">Kettlebell Swing</a></li>
+                <li><a href="#">Kickboxing</a></li>
+                <li><a href="#">Dancing</a></li>
+                <li><a href="#">Running the Stairs</a></li>
+                <li><a href="#">Power Walking</a></li>
+                <li><a href="#">Cycling</a></li>
+                <li><a href="#">Hiking</a></li>
+                <li><a href="#">Swimming</a></li>
+                <li><a href="#">Trampoline-ing</a></li>
+                <li><a href="#">Jogging in Place</a></li>
+                <li><a href="#">Hula - Hopping</a></li>
+                <li><a href="#">Bear Plank Shoulder Tap</a></li>
+                <li><a href="#">Plank Get-Up</a></li>
+                <li><a href="#">Bear Crawl</a></li>
+                <li><a href="#">Half Turkish Get-Up</a></li>
+                <li><a href="#">Single-Arm Kettlebell Push Press</a></li>
+                <li><a href="#">Kettlebell Deadlift to Squat Clean</a></li>
+            </ul>
         </div>
 
         <div
@@ -625,14 +651,33 @@
         <div id="myExercises" class="exercise__content exercise__content--myExercises">
             <input placeholder="search" class="cardio__input"/>
             <p class="myExercises__p1">CUSTOM</p>
-            <p class="myExercises__p2">
+            <button class="myExercises__p2">
                 <i class="material-icons">add</i>
                 Add a Custom Cardio
-            </p>
-            <p class="myExercises__p2">
+            </button>
+            <button class="myExercises__p2" id="addCustomWeights">
                 <i class="material-icons">add</i>  
-                Add a Custom Cardio
-            </p>
+                Add a Custom Exercise
+            </button>
+            <div>
+                <div id="myModalWeights" class="modalWeights">
+                    <!-- Modal content -->
+                    <div class="modal-content-weights">
+                      <span class="close-weights">&times;</span>
+                      <h2 class="weightsText__custom">Custom Exercise</h2>
+                      <div class="weights__inputBlock">
+                          <input placeholder="Name" class="weights__nameInput" id="weights__nameInput"/>
+                          <input placeholder="Equipment" class="weights__equipmentInput" id="weights__equipmentInput"/>
+                          <input placeholder="Time" class="weights__timeInput" id="weights__timeInput"/>
+                      </div>
+                      <button class="weights__saveBtn" id="weights__saveBtn">Save</button>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <div id="taskList" class="taskList"></div>
+                  </div>
+            </div>
         </div>
 
         <div id="say" class="exercise__content exercise__content--say">

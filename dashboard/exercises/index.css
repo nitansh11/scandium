@@ -124,7 +124,6 @@
     /* border: 1px solid black; */
     font-weight: 300;
     font-family: sans-serif;
-    
 }
 .myExercises__p1{
     text-align: center;
@@ -140,6 +139,8 @@
 .myExercises__p2{
     display: flex;
     align-items: center;
+    border: 0px;
+    width: 98.2%;
 }
 .myExercises__p2 > .material-icons{
     margin: 0px 50px 0px 10px;
@@ -381,4 +382,158 @@
 /******** end at 30-12-2020 ---- 8.45 am ******/
 .quickFind__btn2{
     height: 30px;
+}
+
+/******** exercise page cardio part search css *******/
+#myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee;
+}
+
+    /*** exercise cardio page add custom weights css ****/
+.modalWeights {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+      
+/* Modal Content */
+.modal-content-weights {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+}
+      
+/* The Close Button */
+.close-weights {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+      
+.close-weights:hover,
+.close-weights:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+      
+.weights__inputBlock{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+}
+      
+.weights__inputBlock > input{
+    width: 80%;
+    margin: 5%;
+}
+      
+.weights__saveBtn{
+    width: 40%;
+    margin: 5%;
+    background-color: rgb(7, 177, 7);
+    color: white;
+    border: 0px;
+    font-size: 15px;
+    padding: 5px;
+    position: relative;
+    left: 70px;
+    cursor: pointer;
+}
+
+.eachRow{
+    border: 3px solid gray;
+    font-size: 20px;
+    width: 25%;
+    margin: 10px auto;
+    padding: 10px;
+}
+.eachRow:hover{
+    color: rgb(4, 4, 112);
+}
+.eachRowButton > button{
+    width: 74px;
+    margin: 5px 5px 5px 0px;
+    
+    border: 0px;
+    background-color: white;
+    font-size: 15px;
+    outline: none;
+}
+.eachRowButton > button:hover{
+    color: rgb(14, 163, 14);
+    cursor: pointer;
+    font-size: 18px;
+}
+.taskList{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 98%;
+}
+.eachRowName,
+.eachRowWeight,
+.eachRowTime{
+    margin: 5px 5px 5px 0px;
+}
+
+.weights__inputBlock > input{
+    border: 0px;
+    border-bottom: 2px solid gray;
+    outline: none;
+    margin-bottom: 20px;
+}
+.weights__inputBlock > input:hover{
+    border: 0px;
+    border-bottom: 3px solid rgb(84, 84, 235);
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: rgb(84, 84, 235);
+}
+.weightsText__custom{
+    font-weight: 400;
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+button{
+    outline: none;
 }

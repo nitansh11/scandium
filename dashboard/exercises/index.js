@@ -252,3 +252,108 @@ function modal4(){
   }
 }
 modal4()
+
+
+//// exercise page cardio button search bar JS /////
+function myFunction() {
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+      } else {
+          li[i].style.display = "none";
+      }
+  }
+}
+
+
+
+/////// add custom weights in exercise page ////////
+
+  // Get the modal
+  var modal = document.getElementById("myModalWeights");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("addCustomWeights");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close-weights")[0];
+
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+      modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+
+  showTask();
+  var addTaskInputName = document.getElementById("weights__nameInput")
+  var addTaskInputWeight = document.getElementById("weights__equipmentInput")
+  var addTaskInputTime = document.getElementById("weights__timeInput")
+  var addTaskButton = document.getElementById("weights__saveBtn")
+
+  addTaskButton.addEventListener("click", function(){
+    var addTaskInputValue = addTaskInputName.value;
+    var addTaskInputValue1 = addTaskInputWeight.value;
+    var addTaskInputValue2 = addTaskInputTime.value;
+  
+    if(addTaskInputValue.trim() && addTaskInputValue1.trim() && addTaskInputValue2.trim()){
+      var task = localStorage.getItem("weightTask")
+      if (task == null) {
+          taskObj = [];
+      } else {
+          taskObj = JSON.parse(task);
+      }
+      taskObj.push({task_name:addTaskInputValue, task_weight:addTaskInputValue1, task_time:addTaskInputValue2});
+      localStorage.setItem("weightTask", JSON.stringify(taskObj));
+      addTaskInputName.value = "";
+      addTaskInputWeight.value = "";
+      addTaskInputTime.value = "";
+    }
+    showTask();
+  })
+  
+  function showTask(){
+    var task = localStorage.getItem("weightTask")
+    if(task == null){
+        taskObj = []
+    }else{
+        taskObj = JSON.parse(task)
+    }
+
+    var html = ""
+    var taskList = document.getElementById("taskList")
+    taskObj.forEach(function(item, index){
+        html += `<div class="eachRow">
+        <p class='eachRowName'>Name : ${item.task_name}</p>
+        <p class='eachRowWeight'>Exercise : ${item.task_weight}</p>
+        <p class='eachRowTime'>Time : ${item.task_time}</p>
+        <p class='eachRowButton'><button onclick = "deleteItem(${index})" class='weightDeleteBtn'>completed</button></p>
+        </div>`;
+    })
+    taskList.innerHTML = html;
+  }
+
+  function deleteItem(index){
+    var task = localStorage.getItem("weightTask")
+    var taskObj = JSON.parse(task);
+    taskObj.splice(index,1)
+    localStorage.setItem("weightTask", JSON.stringify(taskObj))
+    showTask()
+  }
