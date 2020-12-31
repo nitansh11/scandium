@@ -1,1 +1,1 @@
-// localStorage.setItem("currentUser",JSON.stringify({name:"Nitansh Rastogi",email:"nitansh11@gmail.com"}));
+localStorage.setItem("currentUser",JSON.stringify({name:"Nitansh Rastogi",email:"nitansh11@gmail.com"}));
