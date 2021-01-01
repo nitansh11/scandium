@@ -245,15 +245,49 @@ let chart__exersise= new Chart(exe, {
 
 
 // HYDRODEN BLOG
+var x=JSON.parse(localStorage.getItem("currentUser"))
+var water=x.waterLog;
+var water_labels=[];
+var water_data=[];
+var water_backgroundColor=[];
+document.getElementById('hydrogen_change').addEventListener("click",function(event){
+        if(event.target.value=="7"){
+          num=event.target.value;
+          
+        }
+        else if(event.target.value=="14"){
+          num=event.target.value;
+        }
+        else if(event.target.value=="30"){
+          num=event.target.value;
+        }
+        else{
+          num=water.length
+        }
+        for(var i=0;i<num;i++){
+          water_labels.push(water[water.length-1-i].date);
+          water_data.push(water[water.length-1-i].noOfGlasses);
+          var colors="#"+Math.floor(Math.random()*16777215).toString(16);
+          water_backgroundColor.push(colors);
+        }
+        water_labels.reverse()
+        water_data.reverse()
+        hydro()
+        water_labels=[];
+        water_data=[];
+        water_backgroundColor=[];
+      });
+function hydro(){
 let hydro = document.getElementById("chart__hydrogen").getContext("2d");
 let chart__hydeogen = new Chart(hydro, {
   type: "bar",
   data: {
-    labels: ["We", "Th", "Fr", "Sa", "Su", "Mo", "Tu"],
+    labels: water_labels,
     datasets: [
       {
         //data: [10000, 10000, 10000, 10000, 10000, 10000, 10000],
-        data: [10000, 10000, 10000, 10000, 10000, 10000, 10000],
+        data: water_data,
+        backgroundColor:water_backgroundColor
       },
     ],
   },
@@ -275,6 +309,8 @@ let chart__hydeogen = new Chart(hydro, {
       xAxes: [
         {
           gridLines: {
+            // backgroundColor:"rgb(146, 146, 218)",
+
             color: "rgba(0, 0, 0, 0)",
           },
         },
@@ -288,6 +324,7 @@ let chart__hydeogen = new Chart(hydro, {
             max: 30,
           },
           gridLines: {
+            // backgroundColor:"rgb(146, 146, 218)",
             color: "rgba(0, 0, 0, 0)",
           },
         },
@@ -295,17 +332,56 @@ let chart__hydeogen = new Chart(hydro, {
     },
   },
 });
+}
 
 
+
+
+
+// Sleep BLOG
+var x=JSON.parse(localStorage.getItem("currentUser"))
+var sleep=x.sleepLog;
+var sleep_labels=[];
+var sleep_data=[];
+var sleep_backgroundColor=[];
+document.getElementById('sleep_change').addEventListener("click",function(event){
+        if(event.target.value=="7"){
+          num=event.target.value;
+          
+        }
+        else if(event.target.value=="14"){
+          num=event.target.value;
+        }
+        else if(event.target.value=="30"){
+          num=event.target.value;
+        }
+        else{
+          num=sleep.length
+        }
+        for(var i=0;i<num;i++){
+          sleep_labels.push(sleep[sleep.length-1-i].date);
+          sleep_data.push(sleep[sleep.length-1-i].noOfSleepHours);
+          var colors="#"+Math.floor(Math.random()*16777215).toString(16);
+          sleep_backgroundColor.push(colors);
+        }
+        sleep_labels.reverse()
+        sleep_data.reverse()
+        sleep__ch()
+        sleep_labels=[];
+        sleep_data=[];
+        sleep_backgroundColor=[];
+      });
+function sleep__ch(){
 let sle = document.getElementById("chart__sleep").getContext("2d");
-let chart__sleep = new Chart(sle, {
+let chart_sleep = new Chart(sle, {
   type: "bar",
   data: {
-    labels: ["We", "Th", "Fr", "Sa", "Su", "Mo", "Tu"],
+    labels: sleep_labels,
     datasets: [
       {
         //data: [10000, 10000, 10000, 10000, 10000, 10000, 10000],
-        data: [10000, 10000, 10000, 10000, 10000, 10000, 10000],
+        data: sleep_data,
+        backgroundColor:sleep_backgroundColor
       },
     ],
   },
@@ -318,7 +394,6 @@ let chart__sleep = new Chart(sle, {
         bottom: 30,
       },
     },
-   
     legend: {
       display: false,
     },
@@ -327,6 +402,8 @@ let chart__sleep = new Chart(sle, {
       xAxes: [
         {
           gridLines: {
+            // backgroundColor:"rgb(146, 146, 218)",
+
             color: "rgba(0, 0, 0, 0)",
           },
         },
@@ -335,11 +412,12 @@ let chart__sleep = new Chart(sle, {
         {
           ticks: {
             beginAtZero: true,
-            steps: 6,
-            stepValue: 5,
-            max: 30,
+            steps: 1,
+            stepValue: 1,
+            max: 8,
           },
           gridLines: {
+            // backgroundColor:"rgb(146, 146, 218)",
             color: "rgba(0, 0, 0, 0)",
           },
         },
@@ -347,3 +425,49 @@ let chart__sleep = new Chart(sle, {
     },
   },
 });
+}
+// sleep();
+
+//pop for fasting
+function bodyPopup(){
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("fastingbtn");
+  var span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+bodyPopup()
+
+
+function bodyPopup(){
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("macrosbtn");
+  var span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+bodyPopup()
