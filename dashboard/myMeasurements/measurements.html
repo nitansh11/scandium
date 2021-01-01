@@ -112,7 +112,17 @@
         </div>
   
         <div id="weight" class="measurements__content measurements__content--weight">
-          <h2>weight</h2>
+          <!-- <h2>weight</h2> -->
+          <form action="/action_page.php" class="addDate">
+            <label for="birthday"></label>
+            <input type="date" id="birthday" name="birthday">
+          </form>
+          <canvas id="line-chart" class="line-chart" width="338" height="150"></canvas>
+          <div class="weightPage__graphDownP">
+            <p>30 days</p>
+            <p>60 days</p>
+            <p>All time</p>
+          </div>
         </div>
   
         <div id="body"
@@ -459,7 +469,7 @@
       </div>
     </div>
     
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script src="measurements.js"></script>
   </body>
 </html>

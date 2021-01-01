@@ -90,4 +90,19 @@ function glucosePopup(){
   }
 }
 glucosePopup()
-  
+
+/// weights graph in measurements page ///
+var ctxw = document.getElementById('line-chart').getContext('2d');
+var myChartWeight = new Chart(ctxw, {
+  type: 'line',
+  data: {
+    // labels: ['0','90 Days', '60 Days', '30 Days', '14 Days', '7 Days'],
+    labels: ['0','7 Days', '14 Days', '30 Days', '60 Days', '90 Days'],
+    datasets: [{
+      label: 'Days v/s Weight',
+      data: [0, 0.1, 0.3, 0.5, 0.7, 1.0],
+      //data: [1.0, 0.7, 0.5, 0.3, 0.2, 0.1],
+      borderWidth: 0
+    }]
+  },
+});
