@@ -50,6 +50,7 @@
 .main__navigation__list li {
   color: white;
   margin-right: 15px;
+  cursor: pointer;
 }
 .main__navigation__list a{
   text-decoration: none;
@@ -57,12 +58,13 @@
 }
 /********************Main Banner (Nitansh)*********************/
 .main__banner {
-  height: 60vh;
+  height: 70vh;
   background-image: url("./images/backBanner.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 35px;
+  /* margin-top: 35px; */
 }
+
 .main__banner h1 {
   color: white;
   background-color: #1bc98e;
@@ -71,7 +73,7 @@
   text-align: center;
   font-size: 80px;
   padding: 20px 0px;
-  margin-top: 15vh;
+  margin-top: 20vh;
   margin-bottom: 8vh;
 }
 .main__banner button {
