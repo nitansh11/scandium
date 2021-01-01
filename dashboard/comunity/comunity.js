@@ -70,20 +70,20 @@ const getSection = (e) => {
     }
   }
   document.getElementById("rules").innerHTML=output
-// newsfeed post
-var app=document.getElementById("comments")
-document.getElementById("newsfeed__post").addEventListener("click",post)
-function post(){
-  var elements=document.getElementById("newsfeed__comment").value;
-  var div=document.createElement("div")
-  div.innerHTML=`<div><div class="post_image"><img src="https://app.carbmanager.com/statics/avatar-blank.jpg"></div>
-                  <div class="Anonymous"><p class="small">Anonymous</p>
-                  <p>${elements}</p>
-                  <p><b class="small">Edit</b> | <b class="small">Reply</b></p>
-                  </div></div>`
+// // newsfeed post
+// var app=document.getElementById("comments")
+// document.getElementById("newsfeed__post").addEventListener("click",post)
+// function post(){
+//   var elements=document.getElementById("newsfeed__comment").value;
+//   var div=document.createElement("div")
+//   div.innerHTML=`<div><div class="post_image"><img src="https://app.carbmanager.com/statics/avatar-blank.jpg"></div>
+//                   <div class="Anonymous"><p class="small">Anonymous</p>
+//                   <p>${elements}</p>
+//                   <p><a href="#new__pop"><b class="small">Edit</b></a> | <b class="small">Reply</b></p>
+//                   </div></div>`
   
-  app.append(div);
-}
+//   app.append(div);
+// }
 // GROUPS BLOG
 
 var group_data=[
@@ -182,3 +182,25 @@ function bodyPopup(){
   }
 }
 bodyPopup()
+//user Name
+var x=JSON.parse(localStorage.getItem("currentUser"))
+var name1=x.name,image=x.profileImageUrl;
+output3=`<h3>${name1}</h3>`
+output_image=`<img src=${image}>`;
+document.getElementById('user_name').innerHTML=output3;
+document.getElementById('user_img').innerHTML=output_image;
+
+// newsfeed post
+var app=document.getElementById("comments")
+document.getElementById("newsfeed__post").addEventListener("click",post)
+function post(){
+  var elements=document.getElementById("newsfeed__comment").value;
+  var div=document.createElement("div")
+  div.innerHTML=`<div><div class="post_image">${output_image}</div>
+                  <div class="Anonymous"><p class="small">${output3}</p>
+                  <p>${elements}</p>
+                  <p><a href="#new__pop"><b class="small">Edit</b></a> | <b class="small">Reply</b></p>
+                  </div></div>`
+  
+  app.append(div);
+}

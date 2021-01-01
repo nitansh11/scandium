@@ -214,6 +214,16 @@ b{
     box-shadow :5px 5px 5px 5px rgb(151, 145, 145);
     
 }
+.stories__friend{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.stories__friend>i,.stories__friend>p{
+    margin: 13px 0px 0px 0px;
+}
+.stories__friend>i{
+    margin: 8px 0px 0px 0px;
+}
 /* Stories blog */
 .stories>div>button{
     width: 200px;
@@ -286,6 +296,13 @@ b{
 #rules>div>div{
     margin:10px
 }
+.stories__button{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.stories__button>i,.stories__button>p{
+    margin: 13px 0px 0px 0px;
+}
 
 
 /* Group blog */
@@ -293,7 +310,7 @@ b{
 .groups{
     width: 80%;
     box-shadow :2px 2px 2px 2px rgb(151, 145, 145);
-    margin:100px auto;
+    margin:10px auto;
 }
 .groups__header{
     background-color: #F4F4F4;
@@ -557,4 +574,24 @@ b{
     }
     .dummy2{
     margin-bottom: 150px;
+    }
+
+    .pop{
+        width: 30%;
+        margin: 20px auto;
+        border-radius: 5px;
+    }
+    .close{
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+    }
+    .newsfeed__pop{
+        visibility: hidden;
+        transition: 500ms;
+    }
+    .newsfeed__pop:target{
+        visibility: visible;
     }

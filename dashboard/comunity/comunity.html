@@ -108,8 +108,8 @@
         <div id="my-day" class="community__content community__content--my-day">
           <div class="newsfeed">
             <div>
-              <div><img src="https://app.carbmanager.com/statics/avatar-blank.jpg"></div>
-              <div><h3>No Username</h3></div>
+              <div id="user_img"></div>
+              <div id="user_name"></div>
             </div>
             <div>
               <div><p>This newsfeed and your profile are only visible to confirmed friends.</p></div>
@@ -122,6 +122,15 @@
             </div>
             <div id="comments"></div>
           </div>
+        </div> 
+        <div class="newsfeed__pop" id="new__pop">
+          <div class="pop">
+            <h2>EDIT YOUR COMMENT</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="pop_content">
+              <input type="text"> 
+            </div>
+          </div>
         </div>
 
 
@@ -130,7 +139,7 @@
           <div class="friends">
             <div class="friend__head">
                 <h2>My Friends & Family</h2>
-                <button><i class="material-icons">person</i>INVITE</button>
+                <button class="stories__friend"><i class="material-icons">person</i><p>INVITE</p></button>
             </div>
             <div>
               <p>
@@ -318,7 +327,8 @@
                   This is a great way for families to plan meals and share recipes together, 
                   and for friends to support each other!
               </p>
-              <button><i class="material-icons">chat_bubble</i>SHARE YOUR STORIES</button>
+              <button class="stories__button">
+                <i class="material-icons">chat_bubble</i><p>SHARE YOUR STORIES</p></button>
             </div>
           </div>
           <div class="stories__image">
