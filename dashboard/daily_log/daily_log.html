@@ -12,6 +12,7 @@
       rel="stylesheet"
       href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
+    <script src="./confetti.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="./daily_log.css" />
     <title>My Daily Log</title>
@@ -116,7 +117,7 @@
           <!-- My Meals -->
           <div class="daily-log__content--my-day__my-meals">
             <div
-              class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white"
+              class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--green"
             >
               <p>My Meals</p>
               <p>Net Carbs</p>
@@ -125,62 +126,70 @@
               <p>Net Calories</p>
             </div>
 
-            <div class="daily-log__content--my-day__my-meals__row">
+            <div class="daily-log__content--my-day__my-meals__row" id="breakfast-header">
               <p>Breakfast</p>
               <p>--</p>
               <p>--</p>
               <p>--</p>
               <p>--</p>
             </div>
+            <div id="breakfast-section"></div>
 
-            <div class="daily-log__content--my-day__my-meals__row">
+            <div class="daily-log__content--my-day__my-meals__row" id="lunch-header">
               <p>Lunch</p>
               <p>--</p>
               <p>--</p>
               <p>--</p>
               <p>--</p>
             </div>
+            <div id="lunch-section"></div>
 
-            <div class="daily-log__content--my-day__my-meals__row">
+            <div class="daily-log__content--my-day__my-meals__row" id="dinner-header">
               <p>Dinner</p>
               <p>--</p>
               <p>--</p>
               <p>--</p>
               <p>--</p>
             </div>
+            <div id="dinner-section"></div>
 
-            <div class="daily-log__content--my-day__my-meals__row">
+            <div class="daily-log__content--my-day__my-meals__row" id="snack1-header">
               <p>Snack 1</p>
               <p>--</p>
               <p>--</p>
               <p>--</p>
               <p>--</p>
             </div>
+            <div id="snack1-section"></div>
 
-            <div class="daily-log__content--my-day__my-meals__row">
+            <div class="daily-log__content--my-day__my-meals__row" id="snack2-header">
               <p>Snack 2</p>
               <p>--</p>
               <p>--</p>
               <p>--</p>
               <p>--</p>
             </div>
+            <div id="snack2-section"></div>
 
-            <div class="daily-log__content--my-day__my-meals__row">
+            <div class="daily-log__content--my-day__my-meals__row" id="snack3-header">
               <p>Snack 3</p>
               <p>--</p>
               <p>--</p>
               <p>--</p>
               <p>--</p>
             </div>
-            <div class="daily-log__content--my-day__my-meals__row">
+            <div id="snack3-section"></div>
+
+            <div class="daily-log__content--my-day__my-meals__row" id="supplements-header">
               <p>Supplements</p>
               <p>--</p>
               <p>--</p>
               <p>--</p>
               <p>--</p>
             </div>
+            <div id="supplements-section"></div>
 
-            <div
+            <div id="subtotal-section"
               class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--subtotal"
             >
               <p>Subtotal</p>
@@ -189,15 +198,8 @@
               <p>--</p>
               <p>--</p>
             </div>
-            <div class="daily-log__content--my-day__my-meals__row">
-              <p>Exercise</p>
-              <p>--</p>
-              <p>--</p>
-              <p>--</p>
-              <p>--</p>
-            </div>
-
-            <div
+           
+            <div id="total-header"
               class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--total"
             >
               <p>Total</p>
@@ -392,9 +394,7 @@
           <!-- The Modal -->
           <div id="stepsModal" class="daily-log__content--steps__modal">
             <!-- Modal content -->
-            <div class="daily-log__content--steps__modal-content">
-             
-            </div>
+            <div class="daily-log__content--steps__modal-content"></div>
           </div>
           <p>
             Get movin'! Premium members can connect a fitness device to

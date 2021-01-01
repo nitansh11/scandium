@@ -352,7 +352,9 @@
 .daily-log__content--my-day__my-meals__row--white{
     background-color: white;
 }
-
+.daily-log__content--my-day__my-meals__row--green{
+background-color: #FFE082;
+}
 
 .daily-log__content--my-day__my-meals__row--subtotal{
     background-color: #FFECB3;

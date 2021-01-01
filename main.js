@@ -140,5 +140,5 @@ let obj = {name:"Nitansh Rastogi",email:"nitansh11@gmail.com",waterLog:[
   {date: "29-12-2020", weight: 2},
   {date: "30-12-2020", weight: 7},
   {date: "31-12-2020", weight: 11}
-],steps:[]};
+],steps:[],userFoods:[],userFoodsSubtotal:{carbohydrate:0,protein:0,fat:0,energy:0},isLoggingDone:false};
 localStorage.setItem("currentUser",JSON.stringify(obj));
