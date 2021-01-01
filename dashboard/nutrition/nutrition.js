@@ -25,16 +25,146 @@ const getSection = (e) => {
   
 
   // NUTRITION BLOG
+var x=JSON.parse(localStorage.getItem("currentUser"))
+var nutrition=x.foodHistory;
+console.log(nutrition)
+console.log(nutrition[0].date)
+// var nutrition_protien=[];
+// var nutrition_carbohydrate=[];
+// var nutrition_fat=[];
+// var nutrition_energy=[];
+// var nutrition_color=[];
+var nutrition_data=[];
+var nutrition_labels=[];
+var nutrition_backgroundColor=[];
+// document.getElementById("nutrition_type").addEventListener("click",function(e){
+//   if(e.target.value=="protien"){
+//     lab=e.target.value;
+//   }
+//   else if(e.target.value=="carbohydrate"){
+//     lab=e.target.value;
+//   }
+//   else if(e.target.value=="fat"){
+//     lab=e.target.value;
+//   }
+//   else{
+//     lab=e.target.value;
+//   }
+// })
+document.getElementById('nutrition_change').addEventListener("click",function(event){
 
+
+ document.getElementById('nutrition_type').addEventListener("click",function(e){
+//   if(e.target.value=="protien"){
+//     leb=nutrition.protien;
+//     console.log(leb)
+//   }
+//   if(e.target.value=="carbohydrate"){
+//     leb=nutrition.carbohydrate;
+//   }
+//   else if(e.target.value=="fat"){
+//     leb=nutrition.;
+//   }
+//   else{
+//     leb=nutrition.;
+//   }
+
+  if(event.target.value=="7"){
+    num=event.target.value;
+    // console.log(leb)
+  }
+  else if(event.target.value=="14"){
+    num=event.target.value;
+  }
+  else if(event.target.value=="30"){
+    num=event.target.value;
+
+  }
+  else if(event.target.value=="31"){
+    num=water.length
+  }
+  for(var i=0;i<num;i++){
+    // console.log(nutrition[nutrition.length-1-i].date)
+    nutrition_labels.push(nutrition[nutrition.length-1-i].date);
+    
+    if(e.target.value=="protein"){
+          nutrition_data.push(nutrition[nutrition.length-1-i].protein);
+        }
+        else if(e.target.value=="carbohydrate"){
+            nutrition_data.push(nutrition[nutrition.length-1-i].carbohydrate);
+        }
+        else if(e.target.value=="fat"){
+            nutrition_data.push(nutrition[nutrition.length-1-i].fat);
+        }
+        else{
+          nutrition_data.push(nutrition[nutrition.length-1-i].energy);
+        }
+    var colors="#"+Math.floor(Math.random()*16777215).toString(16);
+    nutrition_backgroundColor.push(colors);
+      
+  }
+  nutrition_labels.reverse()
+  nutrition_data.reverse()
+  nutro()
+  nutrition_labels=[];
+  nutrition_data=[];
+  nutrition_backgroundColor=[];
+})
+});
+// document.getElementById('hydrogen_type').addEventListener("click",function(event){
+//   if(event.target.value=="protien"){
+//     num=event.target.value;
+    
+//   }
+//   else if(event.target.value=="carbohydrate"){
+//     num=event.target.value;
+//   }
+//   else if(event.target.value=="fat"){
+//     num=event.target.value;
+//   }
+//   else{
+//     num=event.target.value;
+//   }
+// })
+
+// document.getElementById('hydrogen_change').addEventListener("click",function(event){
+//   if(event.target.value=="7"){
+//     num=event.target.value;
+    
+//   }
+//   else if(event.target.value=="14"){
+//     num=event.target.value;
+//   }
+//   else if(event.target.value=="30"){
+//     num=event.target.value;
+//   }
+//   else{
+//     num=water.length
+//   }
+//   for(var i=0;i<num;i++){
+//     nutrition_labels.push(nutrition[nutrition.length-1-i].date);
+//     // nutrition_data.push(nutrition[nutrition.length-1-i].noOfGlasses);
+//     var colors="#"+Math.floor(Math.random()*16777215).toString(16);
+//     nutrition_backgroundColor.push(colors);
+//   }
+//   nutrition_labels.reverse()
+//   nutrition_data.reverse()
+//   hydro()
+//   nutrition_labels=[];
+//   // nutrition_data=[];
+//   nutrition_backgroundColor=[];
+// });
+function nutro(){
   let ctx = document.getElementById("myChart").getContext("2d");
   let myChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: ["We", "Th", "Fr", "Sa", "Su", "Mo", "Tu"],
+      labels: nutrition_labels,
       datasets: [
         {
           //data: [10000, 10000, 10000, 10000, 10000, 10000, 10000],
-          data: [10000, 10000, 10000, 10000, 10000, 10000, 10000],
+          data: nutrition_data,
+          backgroundColor:nutrition_backgroundColor,
         },
       ],
     },
@@ -76,6 +206,8 @@ const getSection = (e) => {
       },
     },
   });
+}
+
 // document.querySelector('select[name="change_chart"]').addEventListener("change",function(){
 
 // if(event.target.value="14"){
@@ -245,7 +377,7 @@ let chart__exersise= new Chart(exe, {
 
 
 // HYDRODEN BLOG
-var x=JSON.parse(localStorage.getItem("currentUser"))
+// var x=JSON.parse(localStorage.getItem("currentUser"))
 var water=x.waterLog;
 var water_labels=[];
 var water_data=[];
@@ -339,7 +471,7 @@ let chart__hydeogen = new Chart(hydro, {
 
 
 // Sleep BLOG
-var x=JSON.parse(localStorage.getItem("currentUser"))
+// var x=JSON.parse(localStorage.getItem("currentUser"))
 var sleep=x.sleepLog;
 var sleep_labels=[];
 var sleep_data=[];
