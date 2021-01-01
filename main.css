@@ -52,10 +52,15 @@
   margin-right: 15px;
   cursor: pointer;
 }
-.main__navigation__list a{
+.main__navigation__list a {
   text-decoration: none;
   color: white;
 }
+.main__navigation__list li:hover {
+  text-decoration: underline;
+  background-color: rgba(245, 222, 179, 0.219);
+}
+
 /********************Main Banner (Nitansh)*********************/
 .main__banner {
   height: 70vh;
@@ -168,14 +173,13 @@
   margin-top: 60px;
   justify-items: center;
 }
-.main__appicons_icon img{
+.main__appicons_icon img {
   width: 100%;
 }
-.main__appicons_icon{
+.main__appicons_icon {
   align-items: center;
 }
-.main__appicons_icon div{
- 
+.main__appicons_icon div {
   text-align: center;
   margin-top: 5px;
 }
@@ -188,7 +192,7 @@
 
 .main__appicons_icon i {
   font-size: 14px;
-  color:#FF9800;
+  color: #ff9800;
 }
 
 /********************Members (Nitansh)*********************/
@@ -475,18 +479,114 @@
   margin-bottom: 5px;
 }
 /********************Copyright (Nitansh)*********************/
-.main__copyright{
+.main__copyright {
   height: 25px;
   background-color: #1bc98e;
 }
-.main__copyright p{
+.main__copyright p {
   color: white;
   font-size: 14px;
   text-align: center;
   padding: 5px 0;
   margin-bottom: 0;
 }
-.main__copyright span{
+.main__copyright span {
   color: #2e9dfd;
 }
 
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+
+
+
+
+/**********main memebers ***************/
+@media (min-width: 300px) and (max-width: 600px) {
+  .main__appicons {
+    grid-template-columns: 100%;
+    width: 60%;
+  }
+}
+/**********main app icons***************/
+@media (min-width: 300px) and (max-width: 600px) {
+  .main__members p{
+   
+    font-size: 20px;
+  }
+}
+
+/**********main-features***************/
+@media (min-width: 300px) and (max-width: 900px) {
+  .main__features {
+    grid-template-columns: 100%;
+    width: 90%;
+    margin-right: 20px;
+  }
+  .main__features__content__item__text{
+    margin-left: 30px;
+  }
+  .main__features__image{
+    width: 50%;
+   margin:auto;
+  }
+}
+
+
+/**********partners***************/
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .main__partners {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .main__partners {
+    grid-template-columns: repeat(3, 33.33%);
+  }
+}
+
+
+/**********navigation***************/
+@media (min-width: 300px) and (max-width: 800px) {
+  #hidden-list {
+    display: none;
+  }
+}
+
+
+/**********main-banner***************/
+@media (min-width: 300px) and (max-width: 1300px) {
+  .main__banner h1 {
+    font-size: 40px;
+  }
+  .main__features__content__item__text{
+    margin-bottom: 20px;
+  }
+  .main__recipes__cards,.main__articles__cards {
+    grid-template-columns: 100%;
+  }
+  .main__articles__card__heading h3{
+    display: none;
+  }
+ 
+  .main__footer__content {
+    /* display: grid;
+    grid-template-columns: 50% 25% 25%;
+    width: 70%;
+    margin: auto;
+    grid-column-gap: 20px; */
+    grid-template-columns: 50% 50%;
+  }
+  .main__footer__about {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-bottom: 20px;
+  }
+}
