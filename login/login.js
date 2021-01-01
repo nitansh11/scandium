@@ -1,8 +1,166 @@
-function onSignIn(googleUser){
-    console.log(googleUser);
-    let profile = googleUser.getBasicProfile();
-    console.log(profile);
-    console.log(profile.getImageUrl());
-    console.log(profile.getEmail()); 
-    window.location.href = "../dashboard/daily_log/daily_log.html";
+function onSignIn(googleUser) {
+  let profile = googleUser.getBasicProfile();
+  console.log("User Information: ")
+  console.log('Full Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+  setDummyData(profile.getName(),profile.getEmail(),profile.getImageUrl());
+  console.log("going");
+  window.location.href="../dashboard/daily_log/daily_log.html";
+}
+
+let loginLink = document.getElementById("login-link");
+loginLink.addEventListener(
+  "click",
+  setDummyData(
+    "Nitansh Rastogi",
+    "nitanshtest@gmail.com",
+    "https://i.ibb.co/bPHgFpH/download-1.png"
+  )
+);
+
+function setDummyData(name, email, imageUrl) {
+  //This is just a dummy data ,ignore this
+  let obj = {
+    name: name,
+    email: email,
+    profileImageUrl:imageUrl,
+    waterLog: [
+      { date: "1-12-2020", noOfGlasses: 3 },
+      { date: "2-12-2020", noOfGlasses: 4 },
+      { date: "3-12-2020", noOfGlasses: 5 },
+      { date: "4-12-2020", noOfGlasses: 8 },
+      { date: "5-12-2020", noOfGlasses: 13 },
+      { date: "6-12-2020", noOfGlasses: 17 },
+      { date: "7-12-2020", noOfGlasses: 4 },
+      { date: "8-12-2020", noOfGlasses: 12 },
+      { date: "9-12-2020", noOfGlasses: 7 },
+      { date: "10-12-2020", noOfGlasses: 4 },
+      { date: "11-12-2020", noOfGlasses: 7 },
+      { date: "12-12-2020", noOfGlasses: 9 },
+      { date: "13-12-2020", noOfGlasses: 11 },
+      { date: "14-12-2020", noOfGlasses: 15 },
+      { date: "15-12-2020", noOfGlasses: 19 },
+      { date: "16-12-2020", noOfGlasses: 20 },
+      { date: "17-12-2020", noOfGlasses: 5 },
+      { date: "18-12-2020", noOfGlasses: 2 },
+      { date: "19-12-2020", noOfGlasses: 6 },
+      { date: "20-12-2020", noOfGlasses: 6 },
+      { date: "21-12-2020", noOfGlasses: 9 },
+      { date: "22-12-2020", noOfGlasses: 2 },
+      { date: "23-12-2020", noOfGlasses: 15 },
+      { date: "24-12-2020", noOfGlasses: 18 },
+      { date: "25-12-2020", noOfGlasses: 19 },
+      { date: "26-12-2020", noOfGlasses: 12 },
+      { date: "27-12-2020", noOfGlasses: 6 },
+      { date: "28-12-2020", noOfGlasses: 16 },
+      { date: "29-12-2020", noOfGlasses: 2 },
+      { date: "30-12-2020", noOfGlasses: 7 },
+      { date: "31-12-2020", noOfGlasses: 11 },
+    ],
+    sleepLog: [
+      { date: "1-12-2020", noOfSleepHours: 3 },
+      { date: "2-12-2020", noOfSleepHours: 4 },
+      { date: "3-12-2020", noOfSleepHours: 5 },
+      { date: "4-12-2020", noOfSleepHours: 8 },
+      { date: "5-12-2020", noOfSleepHours: 13 },
+      { date: "6-12-2020", noOfSleepHours: 17 },
+      { date: "7-12-2020", noOfSleepHours: 4 },
+      { date: "8-12-2020", noOfSleepHours: 12 },
+      { date: "9-12-2020", noOfSleepHours: 7 },
+      { date: "10-12-2020", noOfSleepHours: 4 },
+      { date: "11-12-2020", noOfSleepHours: 7 },
+      { date: "12-12-2020", noOfSleepHours: 9 },
+      { date: "13-12-2020", noOfSleepHours: 11 },
+      { date: "14-12-2020", noOfSleepHours: 15 },
+      { date: "15-12-2020", noOfSleepHours: 19 },
+      { date: "16-12-2020", noOfSleepHours: 20 },
+      { date: "17-12-2020", noOfSleepHours: 5 },
+      { date: "18-12-2020", noOfSleepHours: 2 },
+      { date: "19-12-2020", noOfSleepHours: 6 },
+      { date: "20-12-2020", noOfSleepHours: 6 },
+      { date: "21-12-2020", noOfSleepHours: 9 },
+      { date: "22-12-2020", noOfSleepHours: 2 },
+      { date: "23-12-2020", noOfSleepHours: 15 },
+      { date: "24-12-2020", noOfSleepHours: 18 },
+      { date: "25-12-2020", noOfSleepHours: 19 },
+      { date: "26-12-2020", noOfSleepHours: 12 },
+      { date: "27-12-2020", noOfSleepHours: 6 },
+      { date: "28-12-2020", noOfSleepHours: 16 },
+      { date: "29-12-2020", noOfSleepHours: 2 },
+      { date: "30-12-2020", noOfSleepHours: 7 },
+      { date: "31-12-2020", noOfSleepHours: 11 },
+    ],
+    waterLog: [
+      { date: "1-12-2020", noOfGlasses: 3 },
+      { date: "2-12-2020", noOfGlasses: 4 },
+      { date: "3-12-2020", noOfGlasses: 5 },
+      { date: "4-12-2020", noOfGlasses: 8 },
+      { date: "5-12-2020", noOfGlasses: 13 },
+      { date: "6-12-2020", noOfGlasses: 17 },
+      { date: "7-12-2020", noOfGlasses: 4 },
+      { date: "8-12-2020", noOfGlasses: 12 },
+      { date: "9-12-2020", noOfGlasses: 7 },
+      { date: "10-12-2020", noOfGlasses: 4 },
+      { date: "11-12-2020", noOfGlasses: 7 },
+      { date: "12-12-2020", noOfGlasses: 9 },
+      { date: "13-12-2020", noOfGlasses: 11 },
+      { date: "14-12-2020", noOfGlasses: 15 },
+      { date: "15-12-2020", noOfGlasses: 19 },
+      { date: "16-12-2020", noOfGlasses: 20 },
+      { date: "17-12-2020", noOfGlasses: 5 },
+      { date: "18-12-2020", noOfGlasses: 2 },
+      { date: "19-12-2020", noOfGlasses: 6 },
+      { date: "20-12-2020", noOfGlasses: 6 },
+      { date: "21-12-2020", noOfGlasses: 9 },
+      { date: "22-12-2020", noOfGlasses: 2 },
+      { date: "23-12-2020", noOfGlasses: 15 },
+      { date: "24-12-2020", noOfGlasses: 18 },
+      { date: "25-12-2020", noOfGlasses: 19 },
+      { date: "26-12-2020", noOfGlasses: 12 },
+      { date: "27-12-2020", noOfGlasses: 6 },
+      { date: "28-12-2020", noOfGlasses: 16 },
+      { date: "29-12-2020", noOfGlasses: 2 },
+      { date: "30-12-2020", noOfGlasses: 7 },
+      { date: "31-12-2020", noOfGlasses: 11 },
+    ],
+    weightLog: [
+      { date: "1-12-2020", weight: 3 },
+      { date: "2-12-2020", weight: 4 },
+      { date: "3-12-2020", weight: 5 },
+      { date: "4-12-2020", weight: 8 },
+      { date: "5-12-2020", weight: 13 },
+      { date: "6-12-2020", weight: 17 },
+      { date: "7-12-2020", weight: 4 },
+      { date: "8-12-2020", weight: 12 },
+      { date: "9-12-2020", weight: 7 },
+      { date: "10-12-2020", weight: 4 },
+      { date: "11-12-2020", weight: 7 },
+      { date: "12-12-2020", weight: 9 },
+      { date: "13-12-2020", weight: 11 },
+      { date: "14-12-2020", weight: 15 },
+      { date: "15-12-2020", weight: 19 },
+      { date: "16-12-2020", weight: 20 },
+      { date: "17-12-2020", weight: 5 },
+      { date: "18-12-2020", weight: 2 },
+      { date: "19-12-2020", weight: 6 },
+      { date: "20-12-2020", weight: 6 },
+      { date: "21-12-2020", weight: 9 },
+      { date: "22-12-2020", weight: 2 },
+      { date: "23-12-2020", weight: 15 },
+      { date: "24-12-2020", weight: 18 },
+      { date: "25-12-2020", weight: 19 },
+      { date: "26-12-2020", weight: 12 },
+      { date: "27-12-2020", weight: 6 },
+      { date: "28-12-2020", weight: 16 },
+      { date: "29-12-2020", weight: 2 },
+      { date: "30-12-2020", weight: 7 },
+      { date: "31-12-2020", weight: 11 },
+    ],
+    steps: [],
+    userFoods: [],
+    userFoodsSubtotal: { carbohydrate: 0, protein: 0, fat: 0, energy: 0 },
+    isLoggingDone: false,
+  };
+  localStorage.setItem("currentUser", JSON.stringify(obj));
 }
