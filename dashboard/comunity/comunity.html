@@ -28,11 +28,11 @@
           </li>
           <li>
             <i class="material-icons">trending_down</i
-            ><a href="../myMeasurements/measurements.html">My Measurements</a>
+            ><a href="#home">My Measurements</a>
           </li>
           <li>
             <i class="material-icons">spa</i
-            ><a href="../nutrition/nutrition.html">My Nutrition & Wellness</a>
+            ><a href="#home">My Nutrition & Wellness</a>
           </li>
           <li class="active">
             <i class="material-icons">people</i><a href="#">Community</a>
@@ -92,7 +92,7 @@
             <i class="material-icons">group</i>
             <p>GROUPS</p>
           </button>
-          <button class="community__navigation__forum-btn" value="forum">
+          <button class="community__navigation__forum-btn" id="forumbtn" value="forum">
             <i class="material-icons">forum</i>
             <p>FORUM</p>
           </button>
@@ -185,9 +185,123 @@
             <div class="groups__content" id="groups__content1"></div>
           </div>
         </div>
+
+
+
+        <!-- forum blog -->
         <div id="forum" class="community__content community__content--forum">
-          <h2>forum</h2>
+          <div>
+            <div id="myModal" class="modal">
+  
+              <!-- Modal content -->
+              <div class="modal-content">
+                  <div class="measurementsNav">
+                    <span class="close">&times;</span>
+                    <p>UnlockAll - Go Premium</p>
+                  </div>
+                  <p class="dummyP"></p>
+                  <div class="measurements__textDiv">
+                    <img src="https://app.carbmanager.com/statics/_1160500.png" class="measurements__logo"/>
+                    <h1>Carb Manager Premium</h1>
+                    <p class="measurements__text">
+                      <img src="https://app.carbmanager.com/statics/emoji/1f331.svg"/><span>Thrive With Your Keto Lifestyle</span>
+                    </p>
+                  </div>
+                  <div>
+                    <p class="measurements__popupText">
+                      Carb Manager Premium is your one-stop keto and low carb lifestyle solution. 
+                      Featuring 360,000+ recipes, exclusive premium recipes, personalized meal plans, 
+                      a jump-start guide, a smart meal planner, automatic shopping lists, recipe 
+                      importing from the web, unlimited logging, advanced analysis & reports to make 
+                      diet tracking more effective, state-of-the-art food logging features, and third-party 
+                      fitness device integration, Carb Manager Premium is the essential tool for starting and 
+                      maintaining your keto or low carb lifestyle.
+                    </p>
+                  </div>
+                  <div class="measurements__premiumText">
+                      <p>Premium Members Report</p>
+                      <h1>3X The Results</h1>
+                  </div>
+                  <div class="measurements__exclusiveContent">
+                    <p class="exclusive__topText"><img src="https://app.carbmanager.com/statics/emoji/1f331.svg" class="leafLogo"/> Exclusive Content</p>
+                    <div class="exclusive__imgDiv">
+                      <img src="https://firebasestorage.googleapis.com/v0/b/ncache-5793d.appspot.com/o/7a56cc75-8629-4c39-e96e-f0ce75232a3d.jpeg?alt=media&token=c51a1663-084d-48c1-8a87-39d1f62e0df7"/>
+                      <img src="https://carb-manager-images-8yntkaqxqxhzphuw.netdna-ssl.com/2da1676f-2ee0-080c-d2fb-cda7892bf65a.jpeg?alt=media&token=9773cd13-a5e5-429c-8f97-d76704bad084"/>
+                      <img src="https://carb-manager-images-8yntkaqxqxhzphuw.netdna-ssl.com/413e4959-085b-8681-5685-7b75fa2e903f.jpeg?alt=media&token=e2fbb4a3-a7a3-4308-a1c1-363befc3b8c6"/>
+                      <img src="https://carb-manager-images-8yntkaqxqxhzphuw.netdna-ssl.com/b1db6521-9141-02e4-c135-a89037cc21a6.jpeg?alt=media&token=9f015cfc-6851-4b31-8faf-7c9010b0d2b8"/>
+                    </div>
+                    <p id="exclusive__botText">
+                      Keto is not only good for you — it's delicious. Our chefs in the Carb Manager Test Kitchen are cooking up the tastiest low carb and keto dishes. They're all designed to be easy to prepare, 
+                      budget friendly, and so good you won't miss the carbs.<br>
+                      We've also compiled our premium recipes into curated meal plans, designed specifically for different diets and eating preferences.
+                    </p>
+                  </div>
+                  <div class="measurements__macros">
+                    <p class="macros"><img src="https://app.carbmanager.com/statics/emoji/1f331.svg"/>360,000+ Recipes With Macros</p>
+                    <img src="https://carb-manager-images-8yntkaqxqxhzphuw.netdna-ssl.com/medium_af286839-16ae-ca19-fdd6-6f909febf304.jpeg?alt=media&token=b23cc8e3-5cb3-4d78-879a-09566fe90911"/>
+                    <p class="macros__text">
+                      Gain unlimited access to our database of thousands of keto and low carb recipes. Each recipe includes detailed nutrition info, and can be added
+                       to your daily log with one click.<br>NEW! Now you can import recipes from your favorite websites. Just copy the website address into the import 
+                       tool, and we'll make it available in the app.
+                    </p>
+                  </div>
+                  <div class="measurements__smartAnalysis">
+                    <p class="macros"><img src="https://app.carbmanager.com/statics/emoji/1f331.svg"/>Smart Analysis & Reports</p>
+                    <div class="smartAnalysis__imgDiv">
+                      <img src="https://app.carbmanager.com/statics/screen-shot-2017-06-10-at-11-34-29-am_3.png"/>
+                      <img src="https://app.carbmanager.com/statics/screen-shot-2017-06-10-at-11-38-52-am_3.png"/>
+                      <img src="https://app.carbmanager.com/statics/screen-shot-2017-06-10-at-11-43-39-am_3.png"/>
+                      <img src="https://app.carbmanager.com/statics/screen-shot-2017-06-10-at-11-38-00-am_3.png"/>
+                      <img src="https://app.carbmanager.com/statics/screen-shot-2017-06-10-at-11-44-05-am_3.png"/>
+                      <img src="https://app.carbmanager.com/statics/screen-shot-2017-06-10-at-11-41-42-am_3.png"/>
+                    </div>
+                  </div>
+                  <div class="measurements__realPeople">
+                    <p class="macros"><img src="https://app.carbmanager.com/statics/emoji/1f64c.svg"/>Real People Real Success</p>
+                    <img src="https://app.carbmanager.com/statics/erin2_orig.jpg"/>
+                    <p class="realPeople__text">
+                      "Now it is like clockwork. I input my meals and I don't have to keep track of anything because Carb Manager Premium 
+                      does that for me. It also keeps me on track and helps me make better decisions."<br>
+                      — Erin C., lost 61 pounds with Carb Manager Premium
+                    </p>
+                  </div>
+                  <div class="measurements__premiunDetails">
+                    <h3>Carb Manager Premium Details:</h3>
+                    <ul>
+                      <li>The subscription length is 1 year for USD $39.99, 3 months for $16.49, or 1 month for $8.49. All prices are in U.S. dollars.</li>
+                      <li>For iOS purchases, payment will be charged to your iTunes Account at confirmation of purchase</li>
+                      <li>The subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period</li>
+                      <li>Your account will be charged for renewal within 24-hours prior to the end of the current period</li>
+                      <li>Subscriptions may be managed and auto-renewal may be turned off by going to Account Settings after purchase</li>
+                      <li>Read our Privacy Policy and Terms of Use</li>
+                    </ul>
+                  </div>
+                  <div class="measurements__endBtnDiv">
+                    <button class="endBtns__BigBtn">
+                      <i class="material-icons">stars<span>MOST POPULAR</span></i><br>
+                      <!-- <P>MOST POPULAR - SAVE 60%</P><br> -->
+                      <h3>BUY 1 YEAR - $39 ($3.34/MO)</h3>
+                    </button>
+                    <div class="endBtns__smallBtn">
+                      <button>
+                        <p>3 MONTHS - $16.49 <br> ($5.50/MO)</p>
+                      </button>
+                      <button>
+                        <p>1 MONTH <br> ($8.49/MO)</p>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="dummy2"></p>
+                </div>
+            
+            </div>
+          </div>
         </div>
+
+
+
+
+
         <!-- STORIES BLOG -->
         <div id="stories" class="community__content community__content--stories">
           <div class="stories">
