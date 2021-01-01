@@ -6,8 +6,7 @@ if (currentUser) {
 let d = new Date();
 let currentDate =
   d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear();
-console.log(currentDate);
-console.log(currentUser);
+
 /*********************Navigation Javascript (Nitansh)********************** */
 const getSection = (e) => {
   let button = e.currentTarget;
@@ -35,25 +34,31 @@ allButtons.forEach((button) => {
 });
 
 /*********************Water Section Javascript (Nitansh)********************** */
-
+console.log("running")
 let totalFullGlasses = JSON.parse(localStorage.getItem("currentUser")).waterLog.find(oneWaterLog=>oneWaterLog.date===currentDate);
-console.log("Total: ",totalFullGlasses.noOfGlasses);
-let glassesHtml=``;
-let fullGlasses=totalFullGlasses.noOfGlasses;
-let emptyGlasses=8-fullGlasses;
-for(let i=0;i<fullGlasses;i++){
-  glassesHtml+=` <img
-  src="https://app.carbmanager.com/statics/glass_full.png"
-  alt="full_glass"
-/>`
+if(totalFullGlasses){
+  console.log("Total: ",totalFullGlasses.noOfGlasses);
+  let glassesHtml=``;
+  let fullGlasses=totalFullGlasses.noOfGlasses;
+  let emptyGlasses=8-fullGlasses;
+  for(let i=0;i<fullGlasses;i++){
+    glassesHtml+=` <img
+    src="https://app.carbmanager.com/statics/glass_full.png"
+    alt="full_glass"
+  />`
+  }
+  for(let i=0;i<emptyGlasses;i++){
+    glassesHtml+=` <img
+    src="https://app.carbmanager.com/statics/glass_empty.png"
+    alt="empty_glass"
+  />`
+  }
+  document.querySelector(".daily-log__content--water__glasses").innerHTML=glassesHtml;
 }
-for(let i=0;i<emptyGlasses;i++){
-  glassesHtml+=` <img
-  src="https://app.carbmanager.com/statics/glass_empty.png"
-  alt="empty_glass"
-/>`
+else{
+  console.log("Do not have any glasses for today.")
 }
-document.querySelector(".daily-log__content--water__glasses").innerHTML=glassesHtml;
+
 
 /*************** */
 let allGlasses = document.querySelectorAll(
@@ -84,12 +89,12 @@ const glassClicked = (glassImg) => {
       let waterObjIndex = currentUser.waterLog.findIndex(
         (currentWaterObj) => currentWaterObj.date === waterObj.date
       );
-      console.log(waterObjIndex);
+     
       if (waterObjIndex !== -1) {
-        console.log("if");
+    
         currentUser.waterLog[waterObjIndex] = { ...waterObj };
       } else {
-        console.log("else");
+      
         currentUser.waterLog.push({ ...waterObj });
       }
     } else {
@@ -115,7 +120,7 @@ for (let i = 0; i < stepsArr.length; i++) {
     ]
   );
 }
-console.log(lastSevenLabels, lastSevenData, backGroundColorArr);
+
 renderStepsChart(lastSevenData, lastSevenLabels, backGroundColorArr);
 function renderStepsChart(lastSevenData, lastSevenLabels, backGroundColorArr) {
   let ctx1 = document.getElementById("myChart-steps").getContext("2d");
@@ -175,7 +180,7 @@ function renderStepsChart(lastSevenData, lastSevenLabels, backGroundColorArr) {
 document
   .querySelector(".daily-log__content--steps__header i")
   .addEventListener("click", () => {
-    console.log("clicked");
+   
     document.querySelector(
       ".daily-log__content--steps__modal-content"
     ).innerHTML = ` <span class="stepsModal-close">&times;</span>
@@ -223,16 +228,16 @@ function addSteps(e) {
   if (currentUser) {
     currentUser = JSON.parse(currentUser);
     if (currentUser.steps) {
-      console.log("inside");
+   
       let stepObjIndex = currentUser.steps.findIndex(
         (currentStepObj) => currentStepObj.date === stepsObj.date
       );
-      console.log(stepObjIndex);
+     
       if (stepObjIndex !== -1) {
-        console.log("if");
+        
         currentUser.steps[stepObjIndex] = { ...stepsObj };
       } else {
-        console.log("else");
+      
         currentUser.steps.push({ ...stepsObj });
       }
     } else {
