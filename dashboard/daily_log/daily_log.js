@@ -1,4 +1,5 @@
 let currentUser = localStorage.getItem("currentUser");
+
 if (currentUser) {
   currentUser = JSON.parse(currentUser);
 }
@@ -35,6 +36,26 @@ allButtons.forEach((button) => {
 
 /*********************Water Section Javascript (Nitansh)********************** */
 
+let totalFullGlasses = JSON.parse(localStorage.getItem("currentUser")).waterLog.find(oneWaterLog=>oneWaterLog.date===currentDate);
+console.log("Total: ",totalFullGlasses.noOfGlasses);
+let glassesHtml=``;
+let fullGlasses=totalFullGlasses.noOfGlasses;
+let emptyGlasses=8-fullGlasses;
+for(let i=0;i<fullGlasses;i++){
+  glassesHtml+=` <img
+  src="https://app.carbmanager.com/statics/glass_full.png"
+  alt="full_glass"
+/>`
+}
+for(let i=0;i<emptyGlasses;i++){
+  glassesHtml+=` <img
+  src="https://app.carbmanager.com/statics/glass_empty.png"
+  alt="empty_glass"
+/>`
+}
+document.querySelector(".daily-log__content--water__glasses").innerHTML=glassesHtml;
+
+/*************** */
 let allGlasses = document.querySelectorAll(
   ".daily-log__content--water__glasses img"
 );
