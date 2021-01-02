@@ -337,6 +337,8 @@ b{
     display: grid;
     grid-template-columns: 4% 96%;
     justify-content: center;
+    align-items: center;
+    
 }
 .groups__search>div>i{
     margin:1px auto;
@@ -345,6 +347,7 @@ b{
     border:1px solid white;
     height: 30px;
     margin: 5px;
+   outline: none;
 }
 .groups__content{
     width: 90%;
