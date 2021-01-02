@@ -349,6 +349,7 @@
     padding: 10px;
     border-bottom: 1px solid rgba(197, 191, 191, 0.527);
     background-color: #FFF8E1;
+    cursor: pointer;
 }
 .daily-log__content--my-day__my-meals__row--white{
     background-color: white;
