@@ -195,6 +195,7 @@ var app=document.getElementById("comments")
 document.getElementById("newsfeed__post").addEventListener("click",post)
 function post(){
   var elements=document.getElementById("newsfeed__comment").value;
+ 
   var div=document.createElement("div")
   div.innerHTML=`<div><div class="post_image">${output_image}</div>
                   <div class="Anonymous"><p class="small">${output3}</p>
@@ -203,4 +204,5 @@ function post(){
                   </div></div>`
   
   app.append(div);
+  document.getElementById("newsfeed__comment").value='';
 }

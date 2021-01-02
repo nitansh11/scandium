@@ -301,7 +301,7 @@ function myFunction() {
           modal.style.display = "none";
       }
   }
-
+//weights__saveBtn
   showTask();
   var addTaskInputName = document.getElementById("weights__nameInput")
   var addTaskInputWeight = document.getElementById("weights__equipmentInput")
@@ -327,6 +327,8 @@ function myFunction() {
       addTaskInputTime.value = "";
     }
     showTask();
+    var modal = document.getElementById("myModalWeights");
+    modal.style.display = "none";
   })
   
   function showTask(){
@@ -341,8 +343,8 @@ function myFunction() {
     var taskList = document.getElementById("taskList")
     taskObj.forEach(function(item, index){
         html += `<div class="eachRow">
-        <p class='eachRowName'>Name : ${item.task_name}</p>
-        <p class='eachRowWeight'>Exercise : ${item.task_weight}</p>
+        <p class='eachRowName'>Exercise : ${item.task_name}</p>
+        <p class='eachRowWeight'>Equipment : ${item.task_weight}</p>
         <p class='eachRowTime'>Time : ${item.task_time}</p>
         <p class='eachRowButton'><button onclick = "deleteItem(${index})" class='weightDeleteBtn'>completed</button></p>
         </div>`;
