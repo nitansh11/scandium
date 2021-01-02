@@ -34,31 +34,33 @@ allButtons.forEach((button) => {
 });
 
 /*********************Water Section Javascript (Nitansh)********************** */
-console.log("running")
-let totalFullGlasses = JSON.parse(localStorage.getItem("currentUser")).waterLog.find(oneWaterLog=>oneWaterLog.date===currentDate);
-if(totalFullGlasses){
-  console.log("Total: ",totalFullGlasses.noOfGlasses);
-  let glassesHtml=``;
-  let fullGlasses=totalFullGlasses.noOfGlasses;
-  let emptyGlasses=8-fullGlasses;
-  for(let i=0;i<fullGlasses;i++){
-    glassesHtml+=` <img
+console.log("running");
+let totalFullGlasses = JSON.parse(
+  localStorage.getItem("currentUser")
+).waterLog.find((oneWaterLog) => oneWaterLog.date === currentDate);
+if (totalFullGlasses) {
+  console.log("Total: ", totalFullGlasses.noOfGlasses);
+  let glassesHtml = ``;
+  let fullGlasses = totalFullGlasses.noOfGlasses;
+  let emptyGlasses = 8 - fullGlasses;
+  for (let i = 0; i < fullGlasses; i++) {
+    glassesHtml += ` <img
     src="https://app.carbmanager.com/statics/glass_full.png"
     alt="full_glass"
-  />`
+  />`;
   }
-  for(let i=0;i<emptyGlasses;i++){
-    glassesHtml+=` <img
+  for (let i = 0; i < emptyGlasses; i++) {
+    glassesHtml += ` <img
     src="https://app.carbmanager.com/statics/glass_empty.png"
     alt="empty_glass"
-  />`
+  />`;
   }
-  document.querySelector(".daily-log__content--water__glasses").innerHTML=glassesHtml;
+  document.querySelector(
+    ".daily-log__content--water__glasses"
+  ).innerHTML = glassesHtml;
+} else {
+  console.log("Do not have any glasses for today.");
 }
-else{
-  console.log("Do not have any glasses for today.")
-}
-
 
 /*************** */
 let allGlasses = document.querySelectorAll(
@@ -89,12 +91,10 @@ const glassClicked = (glassImg) => {
       let waterObjIndex = currentUser.waterLog.findIndex(
         (currentWaterObj) => currentWaterObj.date === waterObj.date
       );
-     
+
       if (waterObjIndex !== -1) {
-    
         currentUser.waterLog[waterObjIndex] = { ...waterObj };
       } else {
-      
         currentUser.waterLog.push({ ...waterObj });
       }
     } else {
@@ -180,7 +180,6 @@ function renderStepsChart(lastSevenData, lastSevenLabels, backGroundColorArr) {
 document
   .querySelector(".daily-log__content--steps__header i")
   .addEventListener("click", () => {
-   
     document.querySelector(
       ".daily-log__content--steps__modal-content"
     ).innerHTML = ` <span class="stepsModal-close">&times;</span>
@@ -228,16 +227,13 @@ function addSteps(e) {
   if (currentUser) {
     currentUser = JSON.parse(currentUser);
     if (currentUser.steps) {
-   
       let stepObjIndex = currentUser.steps.findIndex(
         (currentStepObj) => currentStepObj.date === stepsObj.date
       );
-     
+
       if (stepObjIndex !== -1) {
-        
         currentUser.steps[stepObjIndex] = { ...stepsObj };
       } else {
-      
         currentUser.steps.push({ ...stepsObj });
       }
     } else {
@@ -423,7 +419,7 @@ breakfastHeaderDiv.innerHTML = breakfastHeaderHtml;
 let breakFastHtml = "";
 for (let oneBreakfast of breakFastFoodArray) {
   breakFastHtml += ` 
-<div class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white">
+<div ondblclick=deleteThisRow() class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white ${oneBreakfast[0]}">
   <p>${oneBreakfast[1]}</p>
   <p>${oneBreakfast[5]} g</p>
   <p>${oneBreakfast[4]} g</p>
@@ -462,7 +458,7 @@ lunchHeaderDiv.innerHTML = lunchHeaderHtml;
 let lunchtml = "";
 for (let oneLunch of lunchFoodArray) {
   lunchtml += ` 
-<div class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white">
+<div ondblclick=deleteThisRow() class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white ${oneLunch[0]}">
   <p>${oneLunch[1]}</p>
   <p>${oneLunch[5]} g</p>
   <p>${oneLunch[4]} g</p>
@@ -501,7 +497,7 @@ dinnerHeaderDiv.innerHTML = dinnerHeaderHtml;
 let dinnerHtml = "";
 for (let oneDinner of dinnerFoodArray) {
   dinnerHtml += ` 
-<div class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white">
+<div ondblclick=deleteThisRow() class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white ${oneDinner[0]}">
   <p>${oneDinner[1]}</p>
   <p>${oneDinner[5]} g</p>
   <p>${oneDinner[4]} g</p>
@@ -540,7 +536,7 @@ snack1HeaderDiv.innerHTML = snack1HeaderHtml;
 let snack1Html = "";
 for (let oneSnack1 of snack1FoodArray) {
   snack1Html += ` 
-<div class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white">
+<div ondblclick=deleteThisRow() class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white ${oneSnack1[0]}">
   <p>${oneSnack1[1]}</p>
   <p>${oneSnack1[5]} g</p>
   <p>${oneSnack1[4]} g</p>
@@ -579,7 +575,7 @@ snack2HeaderDiv.innerHTML = snack2HeaderHtml;
 let snack2Html = "";
 for (let onesnack2 of snack2FoodArray) {
   snack2Html += ` 
-<div class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white">
+<div ondblclick=deleteThisRow() class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white ${onesnack2[0]}">
   <p>${onesnack2[1]}</p>
   <p>${onesnack2[5]} g</p>
   <p>${onesnack2[4]} g</p>
@@ -618,7 +614,7 @@ snack3HeaderDiv.innerHTML = snack3HeaderHtml;
 let snack3Html = "";
 for (let onesnack3 of snack3FoodArray) {
   snack3Html += ` 
-<div class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white">
+<div ondblclick=deleteThisRow() class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white ${onesnack3[0]}">
   <p>${onesnack3[1]}</p>
   <p>${onesnack3[5]} g</p>
   <p>${onesnack3[4]} g</p>
@@ -657,7 +653,7 @@ supplementsHeaderDiv.innerHTML = supplementsHeaderHtml;
 let supplementsHtml = "";
 for (let onesupplements of supplementsFoodArray) {
   supplementsHtml += ` 
-<div class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white">
+<div ondblclick=deleteThisRow() class="daily-log__content--my-day__my-meals__row daily-log__content--my-day__my-meals__row--white ${onesupplements[0]}">
   <p>${onesupplements[1]}</p>
   <p>${onesupplements[5]} g</p>
   <p>${onesupplements[4]} g</p>
@@ -770,3 +766,18 @@ let myChart3 = new Chart(ctx3, {
     },
   },
 });
+
+function deleteThisRow() {
+  let divElement = event.currentTarget;
+  let foodId = divElement.classList[divElement.classList.length - 1];
+  let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  let userFoods = [...currentUser.userFoods];
+  let foundUserFoodIndex = userFoods.findIndex(
+    (userFood) => userFood[0] === foodId
+  );
+  userFoods.splice(foundUserFoodIndex, 1);
+  currentUser.userFoods = userFoods;
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
+  console.log(divElement.remove());
+  window.location.href = "../daily_log/daily_log.html";
+}

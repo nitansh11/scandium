@@ -344,7 +344,8 @@
 
 .daily-log__content--my-day__my-meals__row{
     display: grid;
-    grid-template-columns: repeat(5,20%);
+    /* grid-template-columns: repeat(5,20%); */
+    grid-template-columns: 30%  repeat(4,17.5%);
     padding: 10px;
     border-bottom: 1px solid rgba(197, 191, 191, 0.527);
     background-color: #FFF8E1;

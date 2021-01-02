@@ -377,10 +377,10 @@ function setDummyData(name, email, imageUrl) {
       },
     ],
     steps: [
-      { date: "01-28-2021", stepsCount: 1000 },
-      { date: "01-29-2021", stepsCount: 1200 },
-      { date: "01-30-2021", stepsCount: 800 },
-      { date: "01-31-2021", stepsCount: 1600 },
+      { date: "01-28-2020", stepsCount: 1000 },
+      { date: "01-29-2020", stepsCount: 1200 },
+      { date: "01-30-2020", stepsCount: 800 },
+      { date: "01-31-2020", stepsCount: 1600 },
     ],
     userFoods: [
       [
