@@ -126,20 +126,26 @@
     height: 70px;
     border-radius: 35px;
 }
-.newsfeed>div>div>h3{
+.newsfeed>div>div>h3,.newsfeed>div>div>h4{
     font-size: 30px;
     margin:5px auto;
     color:rgb(170, 170, 236);
     cursor: pointer;
+}
+.newsfeed>div>div>h4{
+    font-size: 20px;
 }
 .newsfeed>div>div>p{
     font-size: 20px;
     margin:5px auto;
     color:grey;
 }
-.newsfeed>div>div>h3:hover,.small:hover{
+.newsfeed>div>div>h3:hover,.small:hover,.newsfeed>div>div>h4:hover{
     color: blue;
 }
+/* h4{
+    font-size: 5px;
+} */
 .newsfeed__post{
     width: 100%;
     height: 50px;
@@ -224,6 +230,7 @@ b{
 .stories__friend>i{
     margin: 8px 0px 0px 0px;
 }
+
 /* Stories blog */
 .stories>div>button{
     width: 200px;

@@ -184,8 +184,8 @@ function bodyPopup(){
 bodyPopup()
 //user Name
 var x=JSON.parse(localStorage.getItem("currentUser"))
-var name1=x.name,image=x.profileImageUrl;
-output3=`<h3>${name1}</h3>`
+var name1=x.name,image=x.profileImageUrl,mail=x.email
+output3=`<h3>${name1}</h3><h4>${mail}</h4>`
 output_image=`<img src=${image}>`;
 document.getElementById('user_name').innerHTML=output3;
 document.getElementById('user_img').innerHTML=output_image;
