@@ -668,7 +668,7 @@ let doneButton = document.getElementById("done-logging");
 doneButton.addEventListener("click", (e) => {
   confetti.start();
   setTimeout(() => {
-    confetti.stop();
+    // confetti.stop();
   }, 1000);
   setTotalLogRow(e);
 });
