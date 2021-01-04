@@ -6,7 +6,7 @@ We live in a world of competition and rewards whereas each day passes most of us
 
 ## Scandium Team Members and their contributions:
 ### 1. Nitansh Rastogi (Me)
-* Worked on the Main Landing Page, My Daily Log , and Foods Section under Dashboard.
+* Worked on the Main Landing Page, Google Authentication, My Daily Log , and Foods Section under Dashboard.
 
 ### 2. Janak Bharadwaj
 * Worked on the Exercise and My Measurements Section under Dashboard.
